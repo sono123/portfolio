@@ -1,0 +1,17 @@
+<div class="form_div">
+	<%= form_tag("/posts/create", method: "post", class: "contact_form") do %>
+	  <%= text_field_tag(:title, nil, class: "form_field new_post", value: "Title", onfocus: "if (this.value=='Title') this.value='';", onblur: "if (this.value=='') this.value='Title';") %>
+		<div class="line"></div>
+		<%= select_tag 'category', options_for_select(@categories.collect{ |c| [c.name, c.id] }), class: "form_field" %>
+		<div class="line"></div>
+		<%= text_field_tag(:title, nil, class: "form_field new_post", value: "Steve Ono", onfocus: "if (this.value=='Steve Ono') this.value='';", onblur: "if (this.value=='') this.value='Steve Ono';") %>
+		<div class="line"></div>
+		<div class="fileContainer">
+			<%= file_field_tag(:image, class: "form_field", id: "file_field") %>
+		</div>
+		<div class="line"></div>
+		<%= text_area_tag(:body, "Body", class: "form_field new_post", value: "Body", cols: "60", rows: "6", onfocus: "if (this.value=='Body') this.value='';", onblur: "if (this.value=='') this.value='Body';") %>
+		<div class="line"></div>
+	  <%= submit_tag("SUBMIT", class: "submit") %>
+	<% end %>
+</div>

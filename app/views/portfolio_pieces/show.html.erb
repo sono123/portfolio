@@ -1,0 +1,27 @@
+<div class="spacer"></div>
+
+<div class="post_category">
+	<p>
+		<%= category_helper(@portfolio_piece.category_id) %>
+	</p>
+</div>
+
+<h1 class="post_title">
+	<%= @portfolio_piece.title %>
+</h1>
+
+<br>
+
+<div class="portfolio_pieces_divs">
+		<div class="<%= @portfolio_piece.category.name.downcase %>">
+				<%= image_tag(@portfolio_piece.image_url, class: "portfolio_image") %>
+		</div>
+</div>
+
+<div class="portfolio_piece_body">
+	<p class="portfolio_paragraph">
+		<%= @portfolio_piece.body %>
+	</p>
+</div>
+
+<div class="spacer"></div>

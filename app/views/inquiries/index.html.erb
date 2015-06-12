@@ -1,0 +1,13 @@
+<div class="spacer"></div>
+<div class="spacer"></div>
+
+<% @inquiries.each do |inquiry| %>
+
+	<div class="inquiry">
+		<h1><%= inquiry.name %></h1>
+		<p><%= inquiry.message %></p>
+	</div>
+	<br>
+	<br>
+
+<% end %>

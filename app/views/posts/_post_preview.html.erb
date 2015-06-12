@@ -1,0 +1,37 @@
+<div class="post_preview">
+
+	<div class="post_information">
+
+		<h1 class="page_title">
+				<%= link_to( post.title[0,40], "posts/#{post.id}", class: "page_title_link" ) %>
+		</h1>
+
+		<div class="page_info_div">
+
+			<p class="page_info">
+				By <%= post.author %>, Posted on <%= date_formatter(post.created_at) %>
+			</p>
+
+			<div class="category_div">
+				<p>
+					<%= category_helper(post.category_id) %>
+				</p>
+			</div>
+
+			<div class="category_div_arrow"></div>
+
+		</div>
+
+		<a href="/posts">
+			<%= image_tag( post.image_url, class: 'post_image') %>
+		</a>
+
+	</div>
+
+</div>
+
+
+
+
+
+

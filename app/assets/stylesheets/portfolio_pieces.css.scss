@@ -1,0 +1,69 @@
+// Place all the styles related to the portfolio_pieces controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.portfolio_category_ul {
+	text-align: center;
+	font-family: 'Roboto Condensed', 'Arial Narrow', sans-serif;
+}
+
+.portfolio_category_ul li {
+	display: inline;
+	margin: 0 5px;
+	cursor: pointer;
+	cursor: hand;
+}
+
+.portfolio_image {
+	max-width: 960px;
+	width: 98%;
+	display: block;
+	margin: auto;
+	border: 7px solid #F2F2F2;
+	margin-bottom: 20px;
+}
+
+.inactive {
+	font-weight: bold;
+	color: #1ABB9C;
+}
+
+.hide {
+	display: none;
+}
+
+.portfolio_piece_title {
+	padding: 0 0 15px;
+  font-family: georgia, serif;
+  font-size: 2em;
+  display: block;
+}
+
+.portfolio_paragraph {
+  font-size: 1.2em;
+  font-family: georgia, serif;
+  line-height: 1.5em;
+  margin: 0 0 20px;
+}
+
+.portfolio_piece_body {
+	max-width: 940px;
+	width: 100%;
+	display: block;
+	margin: auto;
+	margin-top: 35px;
+}
+
+.portfolio_body_container {
+	display: block;
+	margin: auto;
+	width: 98%;
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,48 @@
+<div class="spacer"></div>
+<div class="spacer"></div>
+
+<h1 class="contact_header">New Post Form</h1>
+<p class="contact_paragraph">Only admins can create new posts.</p>
+
+
+<%= form_for @post, :html => {:multipart => true} do |f| %>
+
+	<p>
+	<%= f.label :title %>
+	<%= f.text_field :title %>
+	</p>
+	 
+	<p>
+	<%= f.label :category_id, "Category"%>
+	<%= f.select 'category_id', options_for_select(@categories.collect{ |c| [c.name, c.id] }), class: "form_field" %><br>
+	</p>
+
+	<p>
+	<%= f.label :author %>
+	<%= f.text_field :author %>
+	</p>
+	 
+	<p>
+	<%= f.label :body %>
+	<%= f.text_area :body %>
+	</p>
+
+
+	<p>
+	<%= f.label :image, "Image" %>
+	<%= f.file_field :image %>
+	</p>
+
+ 
+	<p><%= f.submit "Submit" %> </p>
+<% end %>
+
+
+
+
+
+
+
+
+
+

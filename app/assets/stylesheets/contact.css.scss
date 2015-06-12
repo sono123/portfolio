@@ -1,0 +1,96 @@
+// Place all the styles related to the Contact controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.form_div {
+	height: auto;
+	overflow: hidden;
+	width: 98%;
+	margin: auto;
+	margin-bottom: 5em;
+}
+
+.line {
+	border-bottom: 2px solid #F2F2F2;
+	width: 100%;
+}
+
+.contact_header {
+	display: block;
+	clear: both;
+	font-size: 2.4em;
+	font-family: georgia, serif;
+	text-align: center;
+}
+
+.contact_paragraph {
+  font-size: 1.2em;
+  font-family: georgia, serif;
+  line-height: 1.5em;
+  text-align: center;
+  margin: 5px 0 15px;
+}
+
+.contact_form {
+
+}
+
+.form_field {
+	font-family: georgia, serif;
+	width: 100%;
+	display: block;
+	border: none;
+}
+
+#name {
+	width: 100%;
+	margin: auto;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	font-size: 1.25em;
+	color: gray;
+}
+
+#name:focus {
+	outline: 0;
+}
+
+#message {
+	width: 100%;
+	margin: auto;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	font-size: 1.25em;
+	color: gray;
+	resize: none;
+}	
+
+#message:focus {
+	outline: 0;
+}
+
+.submit {
+	width: 300px;
+	height: 35px;
+	display: block;
+	margin: auto;
+	margin-top: 20px;
+	background: #1ABB9C;
+	color: white;
+	border: none;
+	border-radius: 6px;
+	font-size: 1em;
+	font-family: georgia, serif;
+}
+
+.submit:hover {
+	background: #009989;
+}
+
+
+
+
+
+
+
+

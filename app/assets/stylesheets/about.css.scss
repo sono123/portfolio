@@ -1,0 +1,59 @@
+// Place all the styles related to the About controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.icon_divs {
+	display: block;
+	float: left;
+	width: 33%;
+	height: auto;
+}
+
+.skill_icons {
+	display: block;
+	width: 33%;
+	margin: auto;
+	margin-bottom: 50px;
+}
+
+.icons_container {
+	width: 100%;
+	height: auto;
+	padding: 50px 0 80px;
+	overflow: hidden;
+}
+
+.skills_header {
+	display: block;
+	clear: both;
+	font-size: 2.4em;
+	font-family: georgia, serif;
+	text-align: center;
+	margin-top: -20px;
+}
+
+.about_paragraph_container {
+	width: 80%;
+	margin: auto;
+	margin-top: 20px;
+	margin-bottom: 6em;
+}
+
+.about_paragraph {
+  font-size: 1.2em;
+  font-family: georgia, serif;
+  line-height: 1.5em;
+  margin: 0 0 20px;
+}
+
+.about_header {
+	display: block;
+	clear: both;
+	font-size: 2.4em;
+	font-family: georgia, serif;
+	text-align: center;
+}
+
+
+
+

@@ -2,13 +2,93 @@
 <html>
 <head>
   <title>PortfolioSite</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700'>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
+
+
 <body>
 
-<%= yield %>
+	<div class="wrapper">
+		<section id="top_panel">
+			<div class="container">
+				<div id="round_div_bottom">
+					<!-- Border On Bottom Of Image -->
+				</div>
+				<div id="round_div_top">
+					<%= link_to(image_tag('image_round.png', id: 'profile_pic'), root_path) %>
+				</div>
+				<nav>
+					<ul id="navigation">
+						<li><a href="/contact">CONTACT</a></li>
+						<li><a href="/about">ABOUT</a></li>
+						<li><a href="/portfolio">PORTFOLIO</a></li>
+						<!-- <li><a href="/posts">BLOG</a></li> -->
+						<li><%= link_to('BLOG', posts_path)%></li>
+					</ul>
+				</nav>
+			</div>
+		</section>
+
+		<div id="line">
+			<!-- Gray Line Under Nav -->
+		</div>
+
+		<section id="mid_page">
+			<div class="mid_container">
+
+				<%= yield %> <!-- YIELD -->
+				
+			</div>
+		</section>
+
+		<div id="bottom_spacer"></div>
+
+		<div class="footer">
+			<section id="bottom_line">
+				<!-- Gray Line Over Footer -->
+			</section>
+			<div class="footer_container">
+				<div class="icon_sections">
+					<a id="ruby" href="#">
+						<h2>RUBY</h2>
+						<%= link_to(image_tag('ruby_logo.png', id: 'ruby_logo'), root_path) %>
+					</a>
+				</div>
+				<div class="icon_sections">
+					<a id="javascript" href="#">
+						<h2>JAVASCRIPT</h2>
+						<%= link_to(image_tag('js_logo.png', id: 'js_logo'), root_path) %>
+					</a>
+				</div>
+				<div class="icon_sections">
+					<a id="html" href="#">
+						<h2>HTML5</h2>
+						<%= link_to(image_tag('html_logo.png', id: 'html_logo'), root_path) %>
+					</a>
+				</div>
+				<div class="icon_sections">
+					<a id="css" href="#">
+						<h2>CSS3</h2>
+						<%= link_to(image_tag('css_logo.png', id: 'css_logo'), root_path) %>
+					</a>
+				</div>
+				<div class="icon_sections">
+					<a id="sql" href="#">
+						<h2>SQL</h2>
+						<%= link_to(image_tag('sql_logo.png', id: 'sql_logo'), root_path) %>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
 
 </body>
+
 </html>

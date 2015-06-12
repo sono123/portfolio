@@ -1,0 +1,19 @@
+<div class="featured_posts">
+		
+	<a href="/posts">
+		<%= image_tag( post.image_url, class: 'featured_post_image') %>
+	</a>
+
+	<div class="featured_post_information">
+
+		<h3 class="featured_post_title">
+				<%= link_to( post.title[0,40], "posts/#{post.id}", class: "page_title_link" ) %>
+		</h3>
+
+		<p class="featured_post_date">
+			By <%= post.author %>, Posted on <%= date_formatter(post.created_at) %>
+		</p>
+
+	</div>
+	
+</div>

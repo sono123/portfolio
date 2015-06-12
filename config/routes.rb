@@ -1,6 +1,25 @@
 Rails.application.routes.draw do
-  
-  root 'welcome/index'
+
+
+  root 'welcome#index'
+
+  resources :posts
+
+  get '/portfolio' => 'portfolio_pieces#index'
+
+  get '/portfolio/:id' => 'portfolio_pieces#show'
+
+  get '/portfolio_pieces/:id' => 'portfolio_pieces#show'
+
+  get 'about' => 'about#index'
+
+  get '/contact' => 'contact#index'
+
+  post '/inquiries' => 'inquiries#create'
+
+  get '/inquiries' => 'inquiries#index'
+
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
