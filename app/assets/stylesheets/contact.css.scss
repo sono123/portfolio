@@ -28,7 +28,7 @@
   font-family: georgia, serif;
   line-height: 1.5em;
   text-align: center;
-  margin: 5px 0 15px;
+  margin: -9px 0 15px;
 }
 
 .contact_form {
@@ -87,7 +87,18 @@
 	background: #009989;
 }
 
+.contact_options {
+	font-size: 1.1em;
+	text-align: center;
+	font-family: 'Roboto Condensed', 'Arial Narrow', sans-serif;
+}
 
+.contact_options li {
+	display: inline;
+	margin: 0 5px;
+	cursor: pointer;
+	cursor: hand;
+}
 
 
 

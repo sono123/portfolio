@@ -1,0 +1,49 @@
+<div class="spacer"></div>
+
+<div class="post_category">
+	<p>
+		<%= category_helper(@post.category_id) %>
+	</p>
+</div>
+
+<h1 class="post_title">
+	<%= @post.title %>
+</h1>
+
+<p class="post_author_date">
+	By <%= @post.author %>, Posted on <%= date_formatter(@post.created_at) %>
+</p>
+
+
+<% unless @post.pictures.empty? %>
+	<% @post.pictures.each do |pic| %>
+		<%= image_tag( pic.image.url, class: "post_image_large" ) %>
+	<% end %>
+<% end %>
+<br>
+
+<div class="post_body">
+	<p class="post_paragraph">
+		<%= @post.body %>
+	</p>
+</div>
+
+<div>
+	<%= form_tag("/posts/#{@post.id}", method: "patch") do %>
+	  <%= submit_tag("Approve") %>
+	<% end %>
+</div>
+
+<div>
+	<%= form_tag("/posts/#{@post.id}", method: "delete") do %>
+	  <%= submit_tag("Delete") %>
+	<% end %>
+</div>
+
+
+
+
+
+
+
+

@@ -306,6 +306,10 @@ footer a {
 	outline: 0;
 }
 
+#post_category_id {
+	width: 100%;
+}
+
 #category {
 	width: 100%;
 }
@@ -315,6 +319,14 @@ footer a {
 	margin-left: 5px;
 	background: rgb(248, 248, 248);
 }
+
+.image_upload {
+	width: 100%;
+	font-size: .75em;
+}
+
+
+
 
 
 
@@ -343,3 +355,27 @@ footer a {
 .recent_posts_links:hover {
 	color: #1ABB9C;
 }
+
+.hide {
+	display: none;
+}
+
+.post_approved_ul {
+	text-align: center;
+	font-family: 'Roboto Condensed', 'Arial Narrow', sans-serif;
+}
+
+.post_approved_ul li {
+	display: inline;
+	margin: 0 5px;
+	cursor: pointer;
+	cursor: hand;
+}
+
+
+
+
+
+
+
+

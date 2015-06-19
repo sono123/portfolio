@@ -6,6 +6,9 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+require "open-uri"
+
+
 categories = ["Automotive", "Technology", "Hardware", "Aircraft", "Opinion", "Design", "Development"]
 
 categories.each do |category|
@@ -13,13 +16,27 @@ categories.each do |category|
 end
 
 10.times do
-	Post.create(category_id: rand(1..5),
-							title: Faker::Lorem.sentence(3),
-							image_url: Faker::Avatar.image,
-							author: "Steve Ono",
-							body: Faker::Lorem.paragraph(10)
-						 )
+	post = Post.create(category_id: rand(1..5),
+					 title: Faker::Lorem.sentence(3),
+					 author: "Steve Ono",
+					 body: Faker::Lorem.paragraph(10),
+					 featured: true
+					 )
+	pic = post.pictures.new({:post_id => post.id})
+	pic.image = URI.parse(Faker::Avatar.image)
+	pic.save
 end
+
+
+# my_model_instance = MyModel.new
+# file = File.open(file_path)
+# my_model_instance.attachment = file
+# file.close
+# my_model_instance.save!
+
+# user = User.find(params[:id])
+# user.avatar = URI.parse("http://www.xxxx.xxx/image.jpg")
+# user.save
 
 PortfolioPiece.create(category_id: 6,
 											 title: "Gamma Grafix, Inc.",
@@ -48,6 +65,12 @@ PortfolioPiece.create(category_id: 6,
 PortfolioPiece.create(category_id: 7,
 											 title: "Webmail Client",
 											 image_url: 'portfolio-6.png',
+											 body: Faker::Lorem.paragraph(10)
+											)
+
+PortfolioPiece.create(category_id: 7,
+											 title: "Oauth2 Authorization",
+											 image_url: 'portfolio-7.png',
 											 body: Faker::Lorem.paragraph(10)
 											)
 

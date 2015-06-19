@@ -1,27 +1,56 @@
 <div class="spacer"></div>
+
+<ul class="contact_options">
+	<li class="active">Contact Me</li>
+	<li>|</li>
+	<li class="inactive">Guest Post</li>
+</ul>
+
 <div class="spacer"></div>
 
-<h1 class="contact_header">Contact Me</h1>
-<p class="contact_paragraph">Please feel free to reach out to me with any questions or comments.</p>
+<!-- <h1 class="contact_header development">Contact Me</h1> -->
+<p class="contact_paragraph development">Please feel free to reach out to me with any questions or comments.</p>
 
-<!-- Plain HTML Version -->
-<!-- <div class="form_div">
-	<form accept-charset="UTF-8" action="/inquiries" method="post" class="contact_form">
-	  <input class="form_field" id="name" name="name" type="text" value="Name" onfocus="if (this.value=='Name') this.value='';" />
-	  <div class="line"></div>
-	  <textarea class="form_field message" id="message" name="message" cols="60" rows="4" onfocus="if (this.value=='Message') this.value='';" >Message</textarea>
-	  <div class="line"></div>
-	  <input = class="form_field submit" name="commit" type="submit" value="SEND" />
-	</form>
-</div> -->
+<!-- <h1 class="contact_header design hide">Guest Post</h1> -->
+<p class="contact_paragraph design hide">Only admins can create new posts. However, you may submit one for review.</p>
 
-<div class="form_div">
+
+<div class="form_div development">
 	<%= form_tag("/inquiries", method: "post", class: "contact_form", id: "contact_form") do %>
 	  <%= text_field_tag(:name, nil, class: "form_field", value: "Name", onfocus: "if (this.value=='Name') this.value='';", onblur: "if (this.value=='') this.value='Name';") %>
 		<div class="line"></div>
 		<%= text_area_tag(:message, "Message", class: "form_field", value: "Message", cols: "60", rows: "4", onfocus: "if (this.value=='Message') this.value='';", onblur: "if (this.value=='') this.value='Message';") %>
 		<div class="line"></div>
 	  <%= submit_tag("SEND", class: "submit") %>
+	<% end %>
+</div>
+
+
+<div class="form_div design hide">
+	<%= form_for @post, :html => {:multipart => true, class: "contact_form"} do |f| %>
+
+		<%= f.text_field(:title, class: "form_field new_post", value: "Title", onfocus: "if (this.value=='Title') this.value='';", onblur: "if (this.value=='') this.value='Title';") %>
+
+		<div class="line"></div>
+		 
+		<%= f.select('category_id', options_for_select(@categories.collect{ |c| [c.name, c.id] }), {}, class: "form_field") %>
+
+		<div class="line"></div>
+
+		<%= f.text_field(:author, class: "form_field new_post", value: "Steve Ono", onfocus: "if (this.value=='Steve Ono') this.value='';", onblur: "if (this.value=='') this.value='Steve Ono';") %>
+
+		<div class="line"></div>
+		
+		<%= f.text_area(:body, class: "form_field new_post", value: "Body", cols: "60", rows: "6", onfocus: "if (this.value=='Body') this.value='';", onblur: "if (this.value=='') this.value='Body';") %>
+
+		<div class="line"></div>
+
+		<%= file_field_tag("images[]", type: :file, multiple: true, class: "form_field image_upload") %>
+
+		<div class="line"></div>
+	 
+		<%= f.submit("SUBMIT", class: "submit") %>
+
 	<% end %>
 </div>
 

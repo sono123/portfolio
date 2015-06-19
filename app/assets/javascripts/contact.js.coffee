@@ -6,33 +6,44 @@
 
 
 `
-/*
 
 $(document).on('page:change', function() {
 
-	$('body').not('form').on('click', function(e){
+	$('ul.contact_options li').on('click', function(e){
 		e.preventDefault()
 		var selected = $(this)
 		var litext = $(this).text()
-		var unordered_list = $('ul.portfolio_category_ul')
 
-		alert('outside of form')
-		
-	
-		if($(this).attr('id') == 'contact_form') {
-			alert(attr('id'))
-			}
+		$('ul.contact_options li').attr({
+			class: "inactive"
+		});
+
+		$(selected).attr('class', "active")	
+
+		if(litext == "Contact Me") {
+			$('.development').removeClass("hide");
+			$('.design').addClass("hide");
+		}
+		else if(litext == "Guest Post") {
+			$('.design').removeClass("hide");
+			$('.development').addClass("hide");
+		}
 		else {
-			$('input#name').text("Name")
-			$('input#message').text("Message")
-			alert("Hi")
+			$('.design').removeClass("hide");
+			$('.development').removeClass("hide");
 		};
 
 	});
 
 
+	$('ul.contact_options').on('hover', function(e){
+		e.preventDefault()
+		alert("Hello World")
+	});
+
+
 });
 
-*/
+
 
 `

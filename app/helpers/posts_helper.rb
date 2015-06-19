@@ -9,4 +9,12 @@ module PostsHelper
 		category.name
 	end
 
+	def approved?(post)
+		if post.approved != true
+			" not_approved hide"
+		else
+			" approved"
+		end
+	end
+
 end

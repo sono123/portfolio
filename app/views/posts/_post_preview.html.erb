@@ -1,4 +1,4 @@
-<div class="post_preview">
+<div class="post_preview<%= approved?(post) %>">
 
 	<div class="post_information">
 
@@ -23,7 +23,7 @@
 		</div>
 
 		<a href="/posts">
-			<%= image_tag( post.image_url, class: 'post_image') %>
+			<%= image_tag( post.pictures.first.image.url, class: 'post_image') %>
 		</a>
 
 	</div>

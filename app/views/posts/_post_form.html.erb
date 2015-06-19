@@ -1,0 +1,27 @@
+<div class="form_div">
+	<%= form_for @post, :html => {:multipart => true, class: "contact_form"} do |f| %>
+
+		<%= f.text_field(:title, class: "form_field new_post", value: "Title", onfocus: "if (this.value=='Title') this.value='';", onblur: "if (this.value=='') this.value='Title';") %>
+
+		<div class="line"></div>
+		 
+		<%= f.select('category_id', options_for_select(@categories.collect{ |c| [c.name, c.id] }), {}, class: "form_field") %>
+
+		<div class="line"></div>
+
+		<%= f.text_field(:author, class: "form_field new_post", value: "Steve Ono", onfocus: "if (this.value=='Steve Ono') this.value='';", onblur: "if (this.value=='') this.value='Steve Ono';") %>
+
+		<div class="line"></div>
+		
+		<%= f.text_area(:body, class: "form_field new_post", value: "Body", cols: "60", rows: "6", onfocus: "if (this.value=='Body') this.value='';", onblur: "if (this.value=='') this.value='Body';") %>
+
+		<div class="line"></div>
+
+		<%= file_field_tag("images[]", type: :file, multiple: true, class: "form_field image_upload") %>
+
+		<div class="line"></div>
+	 
+		<%= f.submit("SUBMIT", class: "submit") %>
+
+	<% end %>
+</div>

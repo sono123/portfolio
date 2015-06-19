@@ -6,7 +6,13 @@ class PostsController < ApplicationController
   end
 
   def show
-  	@post = Post.find(params["id"])
+  	@post = Post.find(params[:id])
+    @pictures = @post.pictures
+
+    respond_to do |format|
+      format.html
+      format.json {render json: @post}
+    end
   end
 
   def new
@@ -16,25 +22,61 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
-  
-    if @post.save
-      flash[:notice] = "Successfully created post."
-      redirect_to @post
-    else
-      render :action => 'new'
+
+    respond_to do |format|
+      if @post.save
+       
+        if params[:images]
+          #===== The magic is here ;)
+          params[:images].each { |image|
+            @post.pictures.create(image: image)
+          }
+        end
+
+        format.html { redirect_to @post, notice: 'Post was successfully created.' }
+        format.json { render json: @post, status: :created, location: @post }
+      else
+        format.html { render action: "new" }
+        format.json { render json: @post.errors, status: :unprocessable_entity }
+      end
     end
   end
 
+  def edit
+    @post = Post.find(params[:id])
+  end
+
+  def update
+    @post = Post.find(params[:id])
+
+    respond_to do |format|
+      if @post.update_attributes("approved" => true)
+        format.html  { redirect_to(@post,
+                      :notice => 'Post was successfully updated.') }
+        format.json  { head :no_content }
+      else
+        format.html  { render :action => "edit" }
+        format.json  { render :json => @post.errors,
+                      :status => :unprocessable_entity }
+      end
+    end
+  end
+
+  def destroy
+  end
+
+
 
   private
-  # Use callbacks to share common setup or constraints between actions.
-  def set_image(params)
-      # @image = Image.create(params['post']['images_attributes'][0]['asset'])
-  end
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def post_params
-    params.require(:post).permit(:category_id, :title, :image_url, :author, :body, :created_at, :updated_at)
+    params.require(:post).permit(:category_id, 
+                                 :title, 
+                                 :image_url, 
+                                 :author, 
+                                 :body
+                                 )
   end
 
 end
