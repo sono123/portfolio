@@ -65,7 +65,8 @@ PortfolioPiece.create(category_id: 6,
 PortfolioPiece.create(category_id: 7,
 											 title: "Webmail Client",
 											 image_url: 'portfolio-6.png',
-											 body: Faker::Lorem.paragraph(10)
+											 body: Faker::Lorem.paragraph(10),
+											 custom_partial: 'webmail_demo'
 											)
 
 PortfolioPiece.create(category_id: 7,

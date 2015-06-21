@@ -1,0 +1,74 @@
+<div class="webmail_demo">
+
+		<nav id="webmail_nav">
+			<div class="navbar">
+				<div class="navbuttonsdiv">
+				<ul class="navlist">
+					<li class="menubutton"><a href="#"></a></li>
+					<li class="checkbutton"><a href="#"></a></li>
+					<li class="composebutton"><a href="#"></a></li>
+				</ul>
+				</div>
+				<div class="pagetitle">
+					<p>INBOX</p>
+				</div>
+				<div class="searchboxdiv">
+					<div class="searchbox">
+						<a href="#">
+							<!-- <img class="searchbutton" src="images/search_button.png"> -->
+							<%= image_tag('webmail/search_button.png', class: 'searchbutton') %>
+						</a>
+						<input id="search" />
+					</div>
+					<ul>
+						<li class="username"><a href="#"></a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="menusdiv">
+				<div class="mainmenu">
+					<ul class="mainmenulist">
+						<li><a href="#">Inbox</a></li>
+						<li><a href="#">Sent</a></li>
+						<li><a href="#">Junk</a></li>
+						<li><a href="#">Trash</a></li>
+						<li><a href="#">Options</a></li>
+					</ul>
+				</div>
+				<div class="checkmenu">
+					<ul class="checkmenulist">
+						<li><a href="#">All</a></li>
+						<li><a href="#">None</a></li>
+						<li><a href="#">Read</a></li>
+						<li><a href="#">Unread</a></li>
+						<li><a href="#">Starred</a></li>
+					</ul>
+				</div>
+				<div class="usernamemenu">
+					<ul class="usernamemenulist">
+						<li><a href="#">Settings</a></li>
+						<li><a href="#">Account</a></li>
+						<li><a href="#">Feedback</a></li>
+						<li><a href="#">Help</a></li>
+						<li><a href="#">Logout</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	
+
+	
+
+
+	<% 15.times do %>
+		<%= render partial: "portfolio_pieces/email_message" %>
+	<% end %>
+
+
+</div>
+
+<div class="portfolio_piece_body">
+	<p class="portfolio_paragraph">
+		<%= @portfolio_piece.body %>
+	</p>
+</div>

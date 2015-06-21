@@ -20,7 +20,7 @@
 	display: block;
 	margin: auto;
 	border: 7px solid #F2F2F2;
-	margin-bottom: 20px;
+	margin-bottom: 30px;
 }
 
 .inactive {
@@ -61,6 +61,717 @@
 }
 
 
+.webmail_demo {
+	max-width: 960px;
+	width: 98%;
+	min-height: 600px;
+	display: block;
+	margin: auto;
+	border: 7px solid #F2F2F2;
+	margin-bottom: 20px;
+	overflow: hidden;
+	clear: both
+}
+
+
+
+
+
+
+/*     WEBMAIL DEMO CSS     */
+
+
+
+/*     NAVIGATION BAR     */
+
+nav#webmail_nav {
+	width: 100%;
+	margin-top: 0;
+	height: 37px;
+}
+
+.navbar {
+	height: 37px;
+	width: 100%;
+	background-image: image-url('webmail/nav_texture.png');
+	background-repeat: repeat-x;
+	position: relative;
+}
+
+.navbuttonsdiv {
+	width: 28%;
+	height: 37px;
+	display: block;
+	float: left;
+}
+
+.navlist img {
+	display: block;
+	float: left;
+	margin: 5px 0;
+}
+
+li.menubutton:hover {
+	height: 26px;
+	width: 29px;
+	background-image: image-url('webmail/hover_buttons/menu_button_hover.png');
+	border-right: 1px solid #333;
+	border-radius: 4px;
+}
+
+li.menubutton:active {
+	height: 26px;
+	width: 29px;
+	background: image-url('webmail/active_buttons/menu_button_active.png');
+	border-right: 1px solid #333;
+	border-radius: 4px;
+}
+
+li.menubutton {
+	display: block;
+	float: left;
+	height: 26px;
+	width: 30px;
+	background: image-url('webmail/menu_button.png');
+	margin: 5px 5px 0 10px;
+}
+
+li.checkbutton:hover {
+	height: 26px;
+	width: 36px;
+	background: image-url('webmail/hover_buttons/check_button_hover.png');
+	border-right: 1px solid #333;
+	border-radius: 4px;
+}
+
+li.checkbutton:active {
+	height: 26px;
+	width: 36px;
+	background: image-url('webmail/active_buttons/check_button_active.png');
+	border-right: 1px solid #333;
+	border-radius: 4px;
+}
+
+li.checkbutton {
+	display: block;
+	float: left;
+	height: 26px;
+	width: 37px;
+	background: image-url('webmail/check_button.png');
+	margin: 5px 0 0 7px;
+}
+
+li.composebutton:hover {
+	height: 26px;
+	width: 36px;
+	background: image-url('webmail/hover_buttons/compose_button_hover.png');
+	border-right: 1px solid #333;
+	border-radius: 4px;
+}
+
+li.composebutton:active {
+	height: 26px;
+	width: 36px;
+	background: image-url('webmail/active_buttons/compose_button_active.png');
+	border-right: 1px solid #333;
+	border-radius: 4px;
+}
+
+li.composebutton {
+	display: block;
+	float: left;
+	height: 26px;
+	width: 37px;
+	background: image-url('webmail/compose_button.png');
+	margin: 5px 0 0 7px;
+}
+
+.pagetitle {
+	width: 30%;
+	height: 37px;
+	display: block;
+	float: left;
+	text-align: center;
+}
+
+.pagetitle p {
+	margin-top: 11px;
+	font-size: 1em;
+	color: #AAA;
+	font-weight: lighter;
+}
+
+.searchboxdiv {
+	width: 40%;
+	height: 37px;
+	display: block;
+	float: right;
+}
+
+.searchbox {
+	display: block;
+	float: right;
+	height: 22px;
+	width: 225px;
+	background: white;
+	border-radius: 11px;
+	margin: 7px 10px 0 0;
+}
+
+img.searchbutton {
+	margin: 4px 0 0 6px;
+}
+
+input#search {
+	display: block;
+	float: right;
+	height: 17px;
+	width: 190px;
+	border-radius: 11px;
+	margin: 1px 10px 0 0;
+	border: 1px;
+}
+
+input:focus{
+	outline: none;
+}
+
+li.username:hover {
+	height: 26px;
+	width: 91px;
+	background: image-url('webmail/hover_buttons/username_hover.png');
+	border-radius: 4px;
+}
+
+li.username:active {
+	height: 26px;
+	width: 91px;
+	background: image-url('webmail/active_buttons/username_active.png');
+	border-radius: 4px;
+}
+
+li.username {
+	display: block;
+	float: right;
+	height: 26px;
+	width: 91px;
+	background: image-url('webmail/username.png');
+	margin-top: 5px;
+	margin-right: 9px;
+}
+
+.menusdiv {
+	position: absolute;
+	width: 100%;
+}
+
+
+/*   Main menu button dropdown   */
+
+.mainmenu {
+	position: absolute;
+	height: 141px;
+	width: 135px;
+	background: white;
+	margin: 0 0 0 11px;
+	overflow: hidden;
+	border: 1px solid rgba(0,0,0,0.20);
+	display: none;
+}
+
+.mainmenulist {
+	padding: 8px 0;
+	font-size: .8em;
+}
+
+.mainmenulist li {
+	padding-bottom: 15px;
+	line-height: 1;
+}
+
+.mainmenulist li a:hover {
+	background: rgba(0,0,0,0.15);
+}
+
+.mainmenulist li a {
+	color: #333;
+	font-weight: bold;
+	padding: 8px 100px 7px 17px;
+	text-decoration: none;
+}
+
+
+/*    Check Button menu dropdown.    */
+
+.checkmenu {
+	position: absolute;
+	left: 52px;
+	height: 141px;
+	width: 135px;
+	background: white;
+	margin: 0;
+	overflow: hidden;
+	float: left;
+	border: 1px solid rgba(0,0,0,0.20);
+	display: none;
+}
+
+.checkmenulist {
+	padding: 8px 0;
+}
+
+.checkmenulist li {
+	padding-bottom: 15px;
+	font-size: .8em;
+	line-height: 1;
+}
+
+.checkmenulist li a:hover {
+	background: rgba(0,0,0,0.15);
+}
+
+.checkmenulist li a {
+	color: #333;
+	font-weight: bold;
+	padding: 8px 100px 7px 17px;
+	text-decoration: none;
+}
+
+
+/*    Username menu dropdown.    */
+
+.usernamemenu {
+	position: absolute;
+	right: 450px;
+	height: 141px;
+	width: 135px;
+	background: white;
+	margin: 0;
+	overflow: hidden;
+	display: block;
+	border: 1px solid rgba(0,0,0,0.20);
+	display: none;
+}
+
+.usernamemenulist {
+	padding: 8px 0;
+}
+
+.usernamemenulist li {
+	padding-bottom: 15px;
+	font-size: .8em;
+	line-height: 1;
+}
+
+.usernamemenulist li a:hover {
+	background: rgba(0,0,0,0.15);
+}
+
+.usernamemenulist li a {
+	color: #333;
+	font-weight: bold;
+	padding: 8px 100px 7px 17px;
+	text-decoration: none;
+}
+
+.activate {
+	display: block;
+}
+
+
+
+/*   EMAIL MESSAGE   */
+
+
+
+.summary:hover {
+	background: rgba(0,0,0,.08);
+}
+
+.summary {
+	height: 22px;
+	clear: both;
+	padding: 10px 0 7px;
+	font-size: .8em;
+}
+
+.summary .checkboxes {
+	display: block;
+	float: left;
+	width: 9%;
+	height: 22px;
+}
+
+.summary input {
+	margin-left: 58px;
+	margin-top: 5px;
+}
+
+.summary a {
+	display: block;
+	float: left;
+	width: 15%;
+	padding-top: 4px;
+	text-decoration: none;
+	color: #2980B9;
+}
+
+.summary h1 {
+	color: #666666;
+	display: block;
+	float: left;
+	min-width: 35%;
+	padding-top: 4px;
+}
+
+.summary p {
+	color: #666666;
+	display: block;
+	float: right;
+	padding-top: 4px;
+}
+
+.summary i {
+	color: #999;
+	display: block;
+	float: right;
+	min-width: 2%;
+	padding-top: 1px;
+	font-size: 1.3em;
+	margin-right: 50px;
+	margin-left: 10px;
+}
+
+
+/*    SHOW MESSAGE    */
+
+
+.showmessage {
+	background: white;
+	/*border-top: 1px solid rgba(0,0,0,.12);
+	border-bottom: 1px solid rgba(0,0,0,.12);*/
+	overflow: hidden;
+	box-shadow : inset 0px 11px 8px -10px #888, inset 0px -11px 8px -10px #999; 
+	display: none;
+}
+
+.closedivbutton {
+	height: 35px;
+	text-align: center;
+	color: rgba(0,0,0,0.15);
+}
+
+.closedivbutton p {
+	padding-top: 12px;
+}
+
+.showmessage .messagediv {
+	padding: 0 40px 10px;
+}
+
+.optionsmodule {
+	height: 28px;
+	
+}
+
+ul.detailsmodule {
+	display: block;
+	float: left;
+}
+
+.details a:hover {
+	color: rgba(0,0,0,0.55);
+}
+
+.details a {
+	color: rgba(0,0,0,0.35);
+	font-size: .8em;
+	text-decoration: none;
+}
+
+
+
+
+/*   Div containing the "details" button content.    */
+
+.expand_details {
+	height: 60px;
+	display: none;
+}
+
+.lineonediv {
+	min-width: 200px;
+	max-width: 50%;
+	height: 35px;
+	display: block;
+	float: left;
+}
+
+.linetwodiv {
+	min-width: 200px;
+	max-width: 50%;
+	height: 35px;
+	display: block;
+	float: left;
+}
+
+
+/*     ULs with details      */
+
+.expand_details ul {
+	line-height: 2;
+	color: rgba(0,0,0,0.35);
+	margin-top: 10px;
+	font-size: .8em;
+}
+
+strong {
+	font-weight: bold;
+	margin-left: 5px;
+	color: #666;
+}
+
+
+
+
+
+li.details {
+	margin-top: 8px;
+}
+
+.replymodule {
+	position: relative;
+	float: right;
+	margin-right: 116px;
+}
+
+.replymodule li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	position: absolute;
+	top: 0;
+}
+
+.replymodule li, .replymodule a {
+	height: 27px;
+	display: block;
+}
+
+.reply {
+	left: 0px;
+	width: 40px;
+}
+
+.reply {
+	background: image-url('webmail/image_sprite.png') 0 0;
+}
+
+.reply:hover {
+	background: image-url('webmail/hover_buttons/image_sprite_hover.png') 0 0;
+}
+
+.reply:active {
+	background: image-url('webmail/active_buttons/image_sprite_active.png') 0 0;
+}
+
+.replymenuholder {
+	position: absolute;
+	width: 100%;
+}
+
+.replymenudiv {
+	position: absolute;
+	right: 325px;
+	top: -10px;
+	height: 141px;
+	width: 135px;
+	background: white;
+	margin: 15px 0 0 52px;
+	overflow: hidden;
+	display: block;
+	float: right;
+	border: 1px solid rgba(0,0,0,0.20);
+	display: none;
+}
+
+.replymenulist {
+	padding: 8px 0;
+}
+
+.replymenulist li {
+	padding-bottom: 15px;
+	font-size: .8em;
+	line-height: 1;
+}
+
+.replymenulist li a:hover {
+	background: rgba(0,0,0,0.15);
+}
+
+.replymenulist li a {
+	color: #333;
+	font-weight: bold;
+	padding: 8px 100px 7px 17px;
+	text-decoration: none;
+}
+
+.replymenu {
+	left:39px;
+	width:40px;
+}
+
+.replymenu {
+	background: image-url('webmail/image_sprite.png') -39px 0;
+}
+
+.replymenu:hover {
+	background: image-url('webmail/hover_buttons/image_sprite_hover.png') -39px 0;
+	z-index: 1;
+}
+
+.replymenu:active {
+	background: image-url('webmail/active_buttons/image_sprite_active.png') -39px 0;
+	z-index: 1;
+}
+
+.closebutton {
+	left:78px;
+	width:38px;
+}
+
+.closebutton {
+	background: image-url('webmail/image_sprite.png') -78px 0;
+}
+
+.closebutton:hover {
+	background: image-url('webmail/hover_buttons/image_sprite_hover.png') -78px 0;
+	z-index: 1;
+}
+
+.closebutton:active {
+	background: image-url('webmail/active_buttons/image_sprite_active.png') -78px 0;
+	z-index: 1;
+}
+
+.messagebody {
+	margin: 0 40px 20px;
+}
+
+
+.messagebody p {
+	line-height: 1.5;
+	padding-top: 20px;
+	font-size: .8em;
+}
+
+.replydivbutton:hover {
+	background: #D1DFED;
+	color: #3366CC;
+}
+
+.replydivbutton {
+	height: 35px;
+	color: rgba(0,0,0,0.15);
+	text-align: center;
+}
+
+.replydivbutton p {
+	padding-top: 10px;
+	font-size: .8em;
+}
+
+.replybox {
+	height: 90px;
+	margin: 30px 0 80px;
+	display: none;
+}
+
+.replybox2 {
+	display: none;
+	margin: 20px 0 0;
+}
+
+textarea:focus {
+	outline: none;
+}
+
+.textarea {
+	width: 98%;
+	max-width: 98%;
+	border: 1px solid rgba(0,0,0,0.25);
+	border-radius: 5px;
+	padding: 10px;
+	font-size: .8em;
+	font-family: sans-serif;
+}
+
+.replyicons {
+	height: 45px;
+	margin-left: 3px;
+}
+
+.replylist li {
+	display: block;
+	float: left;
+	margin: 3px 5px 0 0;
+}
+
+.replylist li.send:hover {
+	background: image-url('webmail/hover_buttons/sendbutton_hover.png');
+	height: 27px;
+	width: 72px;
+}
+
+.replylist li.format:hover {
+	background: image-url('webmail/hover_buttons/formatbutton_hover.png');
+	height: 27px;
+	width: 37px;
+}
+
+.replylist li.attach:hover {
+	background: image-url('webmail/hover_buttons/attachbutton_hover.png');
+	height: 27px;
+	width: 37px;
+}
+
+.replylist li.trash:hover {
+	background: image-url('webmail/hover_buttons/trashbutton_hover.png');
+	height: 27px;
+	width: 37px;
+}
+
+.replylist li.send {
+	background: image-url('webmail/sendbutton.png');
+	height: 27px;
+	width: 72px;
+}
+
+.replylist li.format {
+	background: image-url('webmail/formatbutton.png');
+	height: 27px;
+	width: 37px;
+}
+
+.replylist li.attach {
+	background: image-url('webmail/attachbutton.png');
+	height: 27px;
+	width: 37px;
+}
+
+.replylist li.trash {
+	background: image-url('webmail/trashbutton.png');
+	height: 27px;
+	width: 37px;
+}
+
+.active {
+	display: block;
+}
+
+.heightdiv {
+	height: 35px;
+}
 
 
 

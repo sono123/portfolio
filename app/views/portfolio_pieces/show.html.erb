@@ -12,16 +12,17 @@
 
 <br>
 
-<div class="portfolio_pieces_divs">
-		<div class="<%= @portfolio_piece.category.name.downcase %>">
-				<%= image_tag(@portfolio_piece.image_url, class: "portfolio_image") %>
-		</div>
-</div>
-
-<div class="portfolio_piece_body">
-	<p class="portfolio_paragraph">
-		<%= @portfolio_piece.body %>
-	</p>
-</div>
+<% if @portfolio_piece.custom_partial %>
+	<%= render partial: "portfolio_pieces/#{@portfolio_piece.custom_partial}" %>
+<% else %>
+	<%= render partial: "portfolio_pieces/standard_portfolio" %>
+<% end %>
 
 <div class="spacer"></div>
+
+
+
+
+
+
+
