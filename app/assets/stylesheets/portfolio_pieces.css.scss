@@ -77,6 +77,47 @@
 
 
 
+/*      OAUTH2 DEMO        */
+
+
+
+
+.oauth_button_div:hover {
+	background-color: #777777;
+}
+
+.oauth_button_div {
+	height: 30px;
+	width: 200px;
+	display: block;
+	margin: auto;
+	text-align: center;
+	font-family: 'Roboto Condensed', sans-serif;
+	background: #1ABB9C;
+	color: white;
+	border-radius: 6px;
+	padding: 15px 0 0;
+	text-transform: uppercase;
+}
+
+
+.oauth_button_a {
+	text-decoration: none;
+}
+
+
+.name_container {
+	font-size: 4em;
+	width: 100%;
+	text-align: center;
+}
+
+
+
+
+
+
+
 
 /*     WEBMAIL DEMO CSS     */
 

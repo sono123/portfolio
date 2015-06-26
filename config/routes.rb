@@ -19,6 +19,10 @@ Rails.application.routes.draw do
 
   get '/inquiries' => 'inquiries#index'
 
+  get "/auth/:provider/callback" => 'sessions#create'
+
+  get "/sessions/destroy" => 'sessions#destroy'
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.

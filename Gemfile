@@ -2,6 +2,11 @@ source 'https://rubygems.org'
 
 gem 'faker'
 gem "paperclip", "~> 4.2"
+gem 'omniauth', '~> 1.2.2'
+gem 'omniauth-google-oauth2'
+gem 'google-api-client', :require => 'google/api_client'
+gem 'dotenv-rails'
+gem 'mandrill-api', '~> 1.0.53', require: "mandrill"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'

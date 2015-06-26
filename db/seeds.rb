@@ -72,7 +72,8 @@ PortfolioPiece.create(category_id: 7,
 PortfolioPiece.create(category_id: 7,
 											 title: "Oauth2 Authorization",
 											 image_url: 'portfolio-7.png',
-											 body: Faker::Lorem.paragraph(10)
+											 body: Faker::Lorem.paragraph(10),
+											 custom_partial: 'oauth2_demo'
 											)
 
 PortfolioPiece.create(category_id: 6,

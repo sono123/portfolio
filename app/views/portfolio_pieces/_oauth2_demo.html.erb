@@ -1,0 +1,60 @@
+
+<div class="portfolio_pieces_divs">
+		<div class="<%= @portfolio_piece.category.name.downcase %>">
+				<%= image_tag(@portfolio_piece.image_url, class: "portfolio_image") %>
+		</div>
+</div>
+
+<div class="portfolio_piece_body">
+	<p class="portfolio_paragraph">
+		<%= @portfolio_piece.body %>
+	</p>
+</div>
+
+<div class="portfolio_piece_body">
+	<p class="portfolio_paragraph">For a demonstration of Oauth2 in action, click on the button below and use your Google account to test Oauth2 for authentication. You will be able to logout from this page whenever you desire.</p>
+</div>
+
+<div class="spacer"></div>
+
+<% if logged_in? %>
+
+	<a class="oauth_button_a" href="/sessions/destroy">
+		<div class="oauth_button_div">
+			<p>
+				Logout
+			</p>
+		</div>
+	</a>
+
+<% else %>
+
+	<a class="oauth_button_a" href="/auth/google_oauth2">
+		<div class="oauth_button_div">
+			<p>
+				Login with Google
+			</p>
+		</div>
+	</a>
+
+<% end %>
+
+<div class="spacer"></div>
+
+<% if logged_in? %>
+	<h1 class="post_title">
+		Your Google Username Is:
+	</h1>
+
+	<br>
+
+	<div class="name_container">
+		<h1><%= current_user.name %></h1>
+	</div>
+<% end %>
+
+<div class="spacer"></div>
+
+
+
+
