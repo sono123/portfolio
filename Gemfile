@@ -7,6 +7,7 @@ gem 'omniauth-google-oauth2'
 gem 'google-api-client', :require => 'google/api_client'
 gem 'dotenv-rails'
 gem 'mandrill-api', '~> 1.0.53', require: "mandrill"
+gem "recaptcha", require: "recaptcha/rails", github: "ambethia/recaptcha"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'

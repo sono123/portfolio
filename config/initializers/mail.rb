@@ -1,5 +1,4 @@
 MANDRILL_API_KEY = "ArVrmI_bpPxIjPt_COzCWQ"
-default from: "steveono@gmail.com"
 
 ActionMailer::Base.smtp_settings = {
 	address: "smtp.mandrillapp.com",

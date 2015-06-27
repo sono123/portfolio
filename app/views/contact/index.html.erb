@@ -18,6 +18,8 @@
 		<div class="line"></div>
 		<%= text_area_tag(:message, "Message", class: "form_field", value: "Message", cols: "60", rows: "4", onfocus: "if (this.value=='Message') this.value='';", onblur: "if (this.value=='') this.value='Message';") %>
 		<div class="line"></div>
+		<%= recaptcha_tags %>
+		<div class="line"></div>
 	  <%= submit_tag("SEND", class: "submit") %>
 	<% end %>
 </div>
@@ -45,6 +47,10 @@
 
 		<%= file_field_tag("images[]", type: :file, multiple: true, class: "form_field image_upload") %>
 
+		<div class="line"></div>
+
+		<%= recaptcha_tags %>
+		
 		<div class="line"></div>
 	 
 		<%= f.submit("SUBMIT", class: "submit") %>
