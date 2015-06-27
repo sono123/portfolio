@@ -8,12 +8,9 @@
 
 <div class="spacer"></div>
 
-<!-- <h1 class="contact_header development">Contact Me</h1> -->
 <p class="contact_paragraph development">Please feel free to reach out to me with any questions or comments.</p>
 
-<!-- <h1 class="contact_header design hide">Guest Post</h1> -->
 <p class="contact_paragraph design hide">Only admins can create new posts. However, you may submit one for review.</p>
-
 
 <div class="form_div development">
 	<%= form_tag("/inquiries", method: "post", class: "contact_form", id: "contact_form") do %>
@@ -25,6 +22,7 @@
 	<% end %>
 </div>
 
+<!-- Refactor this page. Use partials. -->
 
 <div class="form_div design hide">
 	<%= form_for @post, :html => {:multipart => true, class: "contact_form"} do |f| %>

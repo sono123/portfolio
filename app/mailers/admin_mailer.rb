@@ -18,13 +18,29 @@ class AdminMailer < ActionMailer::Base
   			}
   		]
   	}
-
-  	10.times { p "*" }
-  		puts post.title
-  	10.times { p "*" }
-  		puts mandrill_client.messages
-  	10.times { p "*" }
-
-  	p mandrill_client.messages.send_template(template_name, template_content, message)
+  	mandrill_client.messages.send_template(template_name, template_content, message)
   end
+
+  def new_inquiry(inquiry)
+  	template_name = "new-inquiry"
+  	template_content = []
+  	message = {
+  		to: [{email: "steveono@gmail.com"}],
+  		subject: "New Inquiry Received",
+  		merge_vars: [
+  			{rcpt: "steveono@gmail.com",
+  			 vars: [
+  			 	 {name: "NAME", content: inquiry.name },
+  			 	 {name: "MESSAGE", content: inquiry.message }
+  			  ]
+  			}
+  		]
+  	}
+  	mandrill_client.messages.send_template(template_name, template_content, message)
+
+  	10.times { puts "*" }
+  	puts mandrill_client
+  	10.times { puts "*" }
+  end
+
 end

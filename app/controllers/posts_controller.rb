@@ -27,7 +27,6 @@ class PostsController < ApplicationController
       if @post.save
        
         if params[:images]
-          #===== The magic is here ;)
           params[:images].each { |image|
             @post.pictures.create(image: image)
           }
@@ -69,7 +68,8 @@ class PostsController < ApplicationController
 
   private
 
-  # Never trust parameters from the scary internet, only allow the white list through.
+
+
   def post_params
     params.require(:post).permit(:category_id, 
                                  :title, 

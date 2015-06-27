@@ -1,4 +1,5 @@
 class InquiriesController < ApplicationController
+  
   def index
   	@inquiries = Inquiry.all
   end
@@ -11,8 +12,12 @@ class InquiriesController < ApplicationController
 
   def create
   	inquiry = Inquiry.create(name: params['name'], message: params['message'])
-  	redirect_to "/inquiries"
-  	# redirect_to :back
+    if admin?(current_user)
+  	  redirect_to "/inquiries"
+    else
+      flash[:success] = "You have successfully submitted an inquiry. I will be back in touch soon."
+      redirect_to "/contact"
+    end
   end
 
 end
