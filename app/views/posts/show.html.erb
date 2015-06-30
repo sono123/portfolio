@@ -28,16 +28,28 @@
 	</p>
 </div>
 
-<% if @post.approved != true %>
-	<div>
-		<%= form_tag("/posts/#{@post.id}", method: "patch") do %>
-		  <%= submit_tag("Approve") %>
+<% if current_user %>
+	<% if admin? %>
+
+		<% if @post.approved != true %>
+			<div>
+				<%= form_tag("/posts/#{@post.id}", method: "patch") do %>
+				  <%= submit_tag("Approve") %>
+				<% end %>
+			</div>
 		<% end %>
-	</div>
+
+		<div>
+			<%= form_tag("/posts/#{@post.id}", method: "delete") do %>
+			  <%= submit_tag("Delete") %>
+			<% end %>
+		</div>
+
+	<% end %>
 <% end %>
 
-<div>
-	<%= form_tag("/posts/#{@post.id}", method: "delete") do %>
-	  <%= submit_tag("Delete") %>
-	<% end %>
-</div>
+
+
+
+
+

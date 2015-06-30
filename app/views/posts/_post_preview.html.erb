@@ -9,20 +9,19 @@
 		<div class="page_info_div">
 
 			<p class="page_info">
-				By <%= post.author %>, Posted on <%= date_formatter(post.created_at) %>
+				By <span class="post_author"><%= post.author %></span>, Posted on <span class="date"><%= date_formatter(post.created_at) %></span>
 			</p>
 
-			<div class="category_div">
-				<p>
-					<%= category_helper(post.category_id) %>
-				</p>
-			</div>
+			<p class="category_p">
+				<i class="fa fa-bookmark"></i> <%= category_helper(post.category_id) %>
+			</p>
 
-			<div class="category_div_arrow"></div>
+			<!-- <div class="category_div"> -->
+			<!-- </div> -->
 
 		</div>
 
-		<a href="/posts">
+		<a href="/posts/<%=post.id%>">
 			<%= image_tag( post.pictures.first.image.url, class: 'post_image') %>
 		</a>
 

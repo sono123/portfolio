@@ -44,9 +44,9 @@ class InquiriesController < ApplicationController
       if admin?
     	  redirect_to "/inquiries"
       else
-        flash[:success] = "You have successfully submitted an inquiry. I will be back in touch soon."
-        # redirect_to "/contact"
-        redirect_to "/inquiries"
+        flash[:success] = "You have successfully submitted an inquiry. I will be in touch soon."
+        redirect_to "/"
+        # redirect_to "/inquiries"
       end
     else
       10.times { puts "*" }

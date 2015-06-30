@@ -8,6 +8,7 @@ gem 'google-api-client', :require => 'google/api_client'
 gem 'dotenv-rails'
 gem 'mandrill-api', '~> 1.0.53', require: "mandrill"
 gem "recaptcha", require: "recaptcha/rails", github: "ambethia/recaptcha"
+gem 'google-webfonts-rails', '~> 0.0.4'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'

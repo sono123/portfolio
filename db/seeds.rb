@@ -8,7 +8,6 @@
 
 require "open-uri"
 
-
 categories = ["Automotive", "Technology", "Hardware", "Aircraft", "Opinion", "Design", "Development"]
 
 categories.each do |category|
@@ -26,17 +25,6 @@ end
 	pic.image = URI.parse(Faker::Avatar.image)
 	pic.save
 end
-
-
-# my_model_instance = MyModel.new
-# file = File.open(file_path)
-# my_model_instance.attachment = file
-# file.close
-# my_model_instance.save!
-
-# user = User.find(params[:id])
-# user.avatar = URI.parse("http://www.xxxx.xxx/image.jpg")
-# user.save
 
 PortfolioPiece.create(category_id: 6,
 											 title: "Gamma Grafix, Inc.",

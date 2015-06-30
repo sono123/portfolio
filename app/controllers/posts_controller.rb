@@ -1,4 +1,36 @@
 class PostsController < ApplicationController
+  before_action :block_pending_posts, only: :show, :unless => :admin?
+  before_action :block_new_post_form, only: :new, :unless => :admin?
+  before_action :block_edit_post_form, only: :edit, :unless => :admin?
+
+
+  # Move these logged in methods to a separate file.
+
+  def current_user
+    @current_user ||= User.find(session[:user_id]) if session[:user_id]
+    @current_user
+  end
+
+  def logged_in?
+    if current_user
+      true
+    else
+      false
+    end
+  end
+
+  def admin?
+    if current_user
+      if current_user.email == "steveono@gmail.com"
+        true
+      else
+        false
+      end
+    else
+      false
+    end
+  end
+
 
   def index
   	@posts = Post.all
@@ -21,23 +53,36 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new(post_params)
+    if verify_recaptcha
+      10.times { puts "*" }
+      puts "RECAPTCHA VERIFIED"
+      10.times { puts "*" }
 
-    respond_to do |format|
-      if @post.save
-       
-        if params[:images]
-          params[:images].each { |image|
-            @post.pictures.create(image: image)
-          }
+      @post = Post.new(post_params)
+
+      respond_to do |format|
+        if @post.save
+         
+          if params[:images]
+            params[:images].each { |image|
+              @post.pictures.create(image: image)
+            }
+          end
+
+          format.html { redirect_to @post, notice: 'Post was successfully created.' }
+          format.json { render json: @post, status: :created, location: @post }
+        else
+          format.html { render action: "new", notice: 'Your post could not be submitted. Check fields carefully.' }
+          format.json { render json: @post.errors, status: :unprocessable_entity }
         end
-
-        format.html { redirect_to @post, notice: 'Post was successfully created.' }
-        format.json { render json: @post, status: :created, location: @post }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @post.errors, status: :unprocessable_entity }
       end
+    else
+      10.times { puts "*" }
+      puts "RECAPTCHA NOT VERIFIED"
+      10.times { puts "*" }
+
+      flash[:error] = "Recaptcha Failed. Please try again."
+      redirect_to '/contact'
     end
   end
 
@@ -50,8 +95,7 @@ class PostsController < ApplicationController
 
     respond_to do |format|
       if @post.update_attributes("approved" => true)
-        format.html  { redirect_to(@post,
-                      :notice => 'Post was successfully updated.') }
+        format.html  { redirect_to('/posts', :notice => 'Post was successfully updated.') }
         format.json  { head :no_content }
       else
         format.html  { render :action => "edit" }
@@ -68,6 +112,21 @@ class PostsController < ApplicationController
 
   private
 
+
+  def block_pending_posts
+    @post = Post.find(params[:id])
+    unless @post.approved
+      redirect_to '/posts'
+    end
+  end
+
+  def block_new_post_form
+    redirect_to root_path
+  end
+
+  def block_edit_post_form
+    redirect_to root_path
+  end
 
 
   def post_params

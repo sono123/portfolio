@@ -7,11 +7,15 @@
 	<div class="featured_post_information">
 
 		<h3 class="featured_post_title">
-				<%= link_to( post.title[0,40], "posts/#{post.id}", class: "page_title_link" ) %>
+				<%= link_to( post.title[0,30] + "...", "posts/#{post.id}", class: "page_title_link" ) %>
 		</h3>
 
 		<p class="featured_post_date">
-			By <%= post.author %>, Posted on <%= date_formatter(post.created_at) %>
+			By <span class="post_author"><%= post.author %></span>, Posted on <%= date_formatter(post.created_at) %>
+		</p>
+
+		<p class="featured_category_p">
+			<i class="fa fa-bookmark"></i> <%= post.category.name %>
 		</p>
 
 	</div>

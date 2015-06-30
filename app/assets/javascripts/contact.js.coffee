@@ -36,10 +36,22 @@ $(document).on('page:change', function() {
 	});
 
 
-	$('ul.contact_options').on('hover', function(e){
-		e.preventDefault()
-		alert("Hello World")
-	});
+	// From here down, this only works when placed at the bottom of page. Why??
+	
+	var recaptcha1;
+  var recaptcha2;
+
+  var myCallBack = function() {
+    recaptcha1 = grecaptcha.render('recaptcha1', {
+	  	'sitekey' : '6Lft6AgTAAAAAKQZ0oyCDiF8PdIIY8HW5lMChkt0',
+	  	'theme' : 'light'
+  	});
+		
+		recaptcha2 = grecaptcha.render('recaptcha2', {
+      'sitekey' : '6Lft6AgTAAAAAKQZ0oyCDiF8PdIIY8HW5lMChkt0',
+      'theme' : 'light'
+    });
+  };
 
 
 });

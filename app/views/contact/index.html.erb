@@ -8,19 +8,32 @@
 
 <div class="spacer"></div>
 
-<p class="contact_paragraph development">Please feel free to reach out to me with any questions or comments.</p>
+<p class="contact_paragraph development">
+	Please feel free to reach out to me with any questions or comments.
+</p>
 
-<p class="contact_paragraph design hide">Only admins can create new posts. However, you may submit one for review.</p>
+<p class="contact_paragraph design hide">
+	Only admins can create new posts. However, you may submit one for review.
+</p>
 
 <div class="form_div development">
 	<%= form_tag("/inquiries", method: "post", class: "contact_form", id: "contact_form") do %>
+	  
 	  <%= text_field_tag(:name, nil, class: "form_field", value: "Name", onfocus: "if (this.value=='Name') this.value='';", onblur: "if (this.value=='') this.value='Name';") %>
+		
 		<div class="line"></div>
+		
 		<%= text_area_tag(:message, "Message", class: "form_field", value: "Message", cols: "60", rows: "4", onfocus: "if (this.value=='Message') this.value='';", onblur: "if (this.value=='') this.value='Message';") %>
+		
 		<div class="line"></div>
-		<%= recaptcha_tags %>
-		<div class="line"></div>
+
+		<div id="recaptcha1">
+		<!-- <div class="recaptcha1"> -->
+			<!-- <%= recaptcha_tags %> -->
+		</div>
+
 	  <%= submit_tag("SEND", class: "submit") %>
+
 	<% end %>
 </div>
 
@@ -49,9 +62,10 @@
 
 		<div class="line"></div>
 
-		<%= recaptcha_tags %>
-		
-		<div class="line"></div>
+		<div id="recaptcha2">
+		<!-- <div class="recaptcha2"> -->
+		<!-- <%= recaptcha_tags %> -->
+		</div>
 	 
 		<%= f.submit("SUBMIT", class: "submit") %>
 
@@ -59,12 +73,25 @@
 </div>
 
 
+<!-- Refactor this out to the js assets if possible -->
 
-
-
-
-
-
+<script src="https://www.google.com/recaptcha/api.js?onload=myCallBack&render=explicit" async defer></script>
+<script>
+	var recaptcha1;
+	var recaptcha2;
+  
+  var myCallBack = function() {
+    recaptcha1 = grecaptcha.render('recaptcha1', {
+	  	'sitekey' : '6Lft6AgTAAAAAKQZ0oyCDiF8PdIIY8HW5lMChkt0',
+	  	'theme' : 'light'
+  	});
+		
+		recaptcha2 = grecaptcha.render('recaptcha2', {
+      'sitekey' : '6Lft6AgTAAAAAKQZ0oyCDiF8PdIIY8HW5lMChkt0',
+      'theme' : 'light'
+    });
+  };
+</script>
 
 
 

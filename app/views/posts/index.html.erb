@@ -1,10 +1,14 @@
 <div class="spacer"></div>
 
-<ul class="post_approved_ul">
-	<li class="active">Approved</li>
-	<li>|</li>
-	<li class="inactive">Pending</li>
-</ul>
+<% if current_user %>
+	<% if admin? %>
+		<ul class="post_approved_ul">
+			<li class="active">Approved</li>
+			<li>|</li>
+			<li class="inactive">Pending</li>
+		</ul>
+	<% end %>
+<% end %>
 
 <div class="spacer"></div>
 
