@@ -43,23 +43,25 @@
 
 .featured_post_title {
 	font-size: 1em;
+	line-height: 1.25;
 	font-family: georgia, serif;
-	margin: 7px 0 0;
+	margin: 5px 0 0;
 }
 
 .featured_post_date {
 	font-size: .75em;
-	line-height: 1.25em;
-	font-family: 'Roboto', serif;
+	line-height: 1.4em;
+	font-family: 'Roboto';
 	color: #999;
-	margin: 8px 0 0;
+	margin: 4px 0 0;
 }
 
 .featured_category_p {
-	font-family: 'Roboto', serif;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 500;
 	color: #1ABB9C;
 	font-size: .8em;
-	margin: 6px 0 0;
+	margin: 4px 0 0;
 }
 
 
@@ -130,6 +132,8 @@
 .category_p {
 	display: inline;
 	float: right;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 700;
 	color: #1ABB9C;
 	font-size: .9em;
 }
@@ -137,6 +141,10 @@
 .post_category p {
 	padding: 8px 0 0;
 	text-transform: uppercase;
+}
+
+.fa-bookmark {
+	font-size: .85em;
 }
 
 
