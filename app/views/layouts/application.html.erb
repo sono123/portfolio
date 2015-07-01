@@ -4,11 +4,12 @@
   <title>PortfolioSite</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Roboto+Condensed:400,500,700' %>
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-  <%= google_webfonts_init({ google: ['Roboto', 'Roboto Condensed']}) %>
+  
+
+  <%= google_webfonts_link_tag :roboto => [100, 300, 500, 700], :roboto_condensed => [100, 300, 500, 700] %>
 </head>
 
 

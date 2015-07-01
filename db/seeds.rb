@@ -22,7 +22,7 @@ end
 					 featured: true
 					 )
 	pic = post.pictures.new({:post_id => post.id})
-	pic.image = URI.parse(Faker::Avatar.image)
+	pic.image = URI.parse("http://lorempixel.com/600/400/")
 	pic.save
 end
 
