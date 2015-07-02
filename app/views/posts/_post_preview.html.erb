@@ -12,20 +12,11 @@
 				By <span class="post_author"><%= post.author %></span><span class="date">Posted on <%= date_formatter(post.created_at) %></span>
 			</p>
 
+			<i class="fa fa-bookmark preview_category"></i>
+
 			<p class="category_p">
-				<i class="fa fa-bookmark"></i> <%= category_helper(post.category_id) %>
+				<%= category_helper(post.category_id) %>
 			</p>
-
-			
-			<i class="fa fa-linkedin social"></i>
-			
-			<i class="fa fa-pinterest-p social"></i>
-
-			<i class="fa fa-instagram social"></i>
-			
-			<i class="fa fa-facebook social"></i>
-
-			<i class="fa fa-twitter social"></i>
 			
 		</div>
 
