@@ -27,30 +27,35 @@ end
 end
 
 PortfolioPiece.create(category_id: 6,
+											 creator: "Steve Ono",
 											 title: "Gamma Grafix, Inc.",
 											 image_url: 'portfolio-1.png',
 											 body: Faker::Lorem.paragraph(10)
 											)
 
 PortfolioPiece.create(category_id: 6,
+											 creator: "Steve Ono",
 											 title: "Gamma Grafix, Inc.",
 											 image_url: 'portfolio-3.png',
 											 body: Faker::Lorem.paragraph(10)
 											)
 
 PortfolioPiece.create(category_id: 6,
+											 creator: "Steve Ono",
 											 title: "Japan Printing & Graphics, Inc.",
 											 image_url: 'portfolio-5.png',
 											 body: Faker::Lorem.paragraph(10)
 											)
 
 PortfolioPiece.create(category_id: 6,
+											 creator: "Steve Ono",
 											 title: "Life-like Slider",
 											 image_url: 'portfolio-2.png',
 											 body: Faker::Lorem.paragraph(10)
 											)
 
 PortfolioPiece.create(category_id: 7,
+											 creator: "Steve Ono",
 											 title: "Webmail Client",
 											 image_url: 'portfolio-6.png',
 											 body: Faker::Lorem.paragraph(10),
@@ -58,6 +63,7 @@ PortfolioPiece.create(category_id: 7,
 											)
 
 PortfolioPiece.create(category_id: 7,
+											 creator: "Steve Ono",
 											 title: "Oauth2 Authorization",
 											 image_url: 'portfolio-7.png',
 											 body: Faker::Lorem.paragraph(10),
@@ -65,6 +71,7 @@ PortfolioPiece.create(category_id: 7,
 											)
 
 PortfolioPiece.create(category_id: 6,
+											 creator: "Steve Ono",
 											 title: "Ultimate Street Video Player",
 											 image_url: 'portfolio-4.png',
 											 body: Faker::Lorem.paragraph(10)

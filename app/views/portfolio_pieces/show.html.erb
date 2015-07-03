@@ -1,14 +1,16 @@
 <div class="spacer"></div>
 
-<div class="post_category">
-	<p>
-		<%= category_helper(@portfolio_piece.category_id) %>
-	</p>
-</div>
-
-<h1 class="post_title">
+<h1 class="portfolio_title">
 	<%= @portfolio_piece.title %>
 </h1>
+
+<div class="portfolio_info_div_show">
+	<span class="by">Created by</span> 
+	<span class="post_author_show"><%= @portfolio_piece.creator %></span>
+	<span class="space"></span>
+	<span class="category_p_show"><i class="fa fa-bookmark preview_category"></i></span>
+	<span class="category_p_show"><%= @portfolio_piece.category.name %></span>
+</div>
 
 <br>
 

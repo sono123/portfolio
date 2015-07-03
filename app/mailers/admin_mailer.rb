@@ -37,10 +37,23 @@ class AdminMailer < ActionMailer::Base
   		]
   	}
   	mandrill_client.messages.send_template(template_name, template_content, message)
+  end
 
-  	10.times { puts "*" }
-  	puts mandrill_client
-  	10.times { puts "*" }
+  def new_user(user)
+    template_name = "new-user"
+    template_content = []
+    message = {
+      to: [{email: user.email}],
+      subject: "Oauth Login Successful!",
+      merge_vars: [
+        {rcpt: user.email,
+         vars: [
+           {name: "NAME", content: user.name }
+          ]
+        }
+      ]
+    }
+    mandrill_client.messages.send_template(template_name, template_content, message)
   end
 
 end

@@ -12,12 +12,15 @@ $(document).on('page:change', function() {
 		e.preventDefault()
 		var selected = $(this)
 		var litext = $(this).text()
+		var pipe = $('ul.portfolio_category_ul li.pipe')
 
 		$('ul.portfolio_category_ul li').attr({
 			class: "inactive"
 		});
 
-		$(selected).attr('class', "active")	
+		$(selected).attr('class', "active")
+		$(pipe).attr('class', "pipe")
+
 
 		if(litext == "Development") {
 			$('.development').removeClass("hide");

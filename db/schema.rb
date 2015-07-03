@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150623210404) do
+ActiveRecord::Schema.define(version: 20150703054105) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -47,6 +47,7 @@ ActiveRecord::Schema.define(version: 20150623210404) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "custom_partial"
+    t.string   "creator"
   end
 
   create_table "posts", force: true do |t|
@@ -68,6 +69,7 @@ ActiveRecord::Schema.define(version: 20150623210404) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "name"
+    t.boolean  "first_time_user"
   end
 
 end

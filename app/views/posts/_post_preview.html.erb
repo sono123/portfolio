@@ -6,18 +6,12 @@
 				<%= link_to( post.title[0,40], "posts/#{post.id}", class: "page_title_link" ) %>
 		</h1>
 
-		<div class="page_info_div">
-
-			<p class="page_info">
-				By <span class="post_author"><%= post.author %></span><span class="date">Posted on <%= date_formatter(post.created_at) %></span>
-			</p>
-
-			<i class="fa fa-bookmark preview_category"></i>
-
-			<p class="category_p">
-				<%= category_helper(post.category_id) %>
-			</p>
-			
+		<div class="page_info_div_preview">
+			<span class="by">By</span> 
+			<span class="post_author_show"><%= post.author %></span>
+			<span class="date_show">Posted on <%= date_formatter(post.created_at) %></span>
+			<span class="category_p_show"><i class="fa fa-bookmark preview_category"></i></span>
+			<span class="category_p_show"><%= post.category.name %></span>
 		</div>
 
 		<a href="/posts/<%=post.id%>">

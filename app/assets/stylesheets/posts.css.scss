@@ -253,9 +253,15 @@ i.preview_category {
 	margin: 1px 0 0 0;
 }
 
-.page_info_div {
+.page_info_div_preview {
 	width: 100%;
-	height: 24px;
+	height: 25px;
+}
+
+.page_info_div_preview span {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	font-size: .85em;
 }
 
 .date {
@@ -358,7 +364,7 @@ span.category_p_show i.fa-bookmark {
 
 .date_show {
 	color: #BDC3C7;
-	margin: 0 18px;
+	margin: 0 8px;
 }
 
 .category_p_show {

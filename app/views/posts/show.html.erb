@@ -15,13 +15,13 @@
 		<%= @post.title %>
 	</h1>
 
-		<div class="page_info_div_show">
-			<span class="by">By</span> 
-			<span class="post_author_show"><%= @post.author %></span>
-			<span class="date_show">Posted on <%= date_formatter(@post.created_at) %></span>
-			<span class="category_p_show"><i class="fa fa-bookmark preview_category"></i></span>
-			<span class="category_p_show"><%= @post.category.name %></span>
-		</div>
+	<div class="page_info_div_show">
+		<span class="by">By</span> 
+		<span class="post_author_show"><%= @post.author %></span>
+		<span class="date_show">Posted on <%= date_formatter(@post.created_at) %></span>
+		<span class="category_p_show"><i class="fa fa-bookmark preview_category"></i></span>
+		<span class="category_p_show"><%= @post.category.name %></span>
+	</div>
 
 </div>
 

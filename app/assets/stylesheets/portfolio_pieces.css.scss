@@ -5,13 +5,21 @@
 .portfolio_category_ul {
 	text-align: center;
 	font-family: 'Roboto Condensed', 'Arial Narrow', sans-serif;
+	font-weight: 700;
+	color: #BDC3C7;
+}
+
+.pipe {
+	color: #E0E0E0;	
 }
 
 .portfolio_category_ul li {
 	display: inline;
 	margin: 0 5px;
-	cursor: pointer;
-	cursor: hand;
+}
+
+.active {
+	cursor: auto;
 }
 
 .portfolio_image {
@@ -26,6 +34,8 @@
 .inactive {
 	font-weight: bold;
 	color: #1ABB9C;
+	cursor: pointer;
+	cursor: hand;
 }
 
 .hide {
@@ -39,19 +49,23 @@
   display: block;
 }
 
+.social_media_div_portfolio {
+	margin-top: 40px;
+}
+
 .portfolio_paragraph {
-  font-size: 1.2em;
+  font-size: 1.1em;
   font-family: georgia, serif;
-  line-height: 1.5em;
   margin: 0 0 20px;
+  line-height: 1.9em;
 }
 
 .portfolio_piece_body {
-	max-width: 940px;
+	max-width: 850px;
 	width: 100%;
 	display: block;
 	margin: auto;
-	margin-top: 35px;
+	margin-top: 25px;
 }
 
 .portfolio_body_container {
@@ -100,6 +114,21 @@
 	text-transform: uppercase;
 }
 
+.oauth_demo_div {
+	border: 7px solid #F2F2F2;
+	width: 65%;
+	margin: auto;
+}
+
+.oauth_demo_div p {
+	padding: 0 20px;
+}
+
+.oauth_email_message {
+	font-size: 1.25em;
+	text-align: center;
+	font-family: 'Georgia', serif;
+}
 
 .oauth_button_a {
 	text-decoration: none;
@@ -107,11 +136,36 @@
 
 
 .name_container {
-	font-size: 4em;
+	font-size: 3.5em;
 	width: 100%;
 	text-align: center;
 }
 
+.portfolio_title {
+	width: 100%;
+	text-align: center;	
+	font-family: georgia, serif;
+	font-size: 2em;
+	margin-top: .83em;
+}
+
+.portfolio_info_div_show {
+	width: 650px;
+	margin: auto;
+	margin-bottom: 25px;
+	margin-top: 10px;
+	text-align: center;
+}
+
+.portfolio_info_div_show span {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	font-size: .85em;
+}
+
+.space {
+	padding-right: 5px;
+}
 
 
 

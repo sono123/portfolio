@@ -1,8 +1,51 @@
+<% if logged_in? %>
+	<div class="oauth_demo_div">
+		<br>
+		<h1 class="portfolio_title">
+			Your Google Username Is:
+		</h1>
+
+		<br>
+
+		<div class="name_container">
+			<h1><%= current_user.name %></h1>
+		</div>
+		
+		<% if current_user.first_time_user == true %>
+			<br>
+			<p class="oauth_email_message">
+				I also sent you a confirmation email via Mandrill's REST API. You can logout at the bottom of this page whenever you wish.
+			</p>
+		<% else %>
+			<br>
+			<p class="oauth_email_message">
+				You may logout at the bottom of this page whenever you wish.
+			</p>
+		<% end %>
+
+		<br>
+		<br>
+		<br>
+	</div>
+
+	<div class="spacer"></div>
+<% end %>
+
 
 <div class="portfolio_pieces_divs">
 		<div class="<%= @portfolio_piece.category.name.downcase %>">
 				<%= image_tag(@portfolio_piece.image_url, class: "portfolio_image") %>
 		</div>
+</div>
+
+<div class="post_body">
+	<div class="social_media_div">
+		<i class="fa fa-linkedin social"></i>
+		<i class="fa fa-pinterest-p social"></i>
+		<i class="fa fa-instagram social"></i>
+		<i class="fa fa-twitter social"></i>
+		<i class="fa fa-facebook social"></i>
+	</div>
 </div>
 
 <div class="portfolio_piece_body">
@@ -37,27 +80,6 @@
 		</div>
 	</a>
 
-<% end %>
-
-<div class="spacer"></div>
-
-<% if logged_in? %>
-	<h1 class="post_title">
-		Your Google Username Is:
-	</h1>
-
-	<br>
-
-	<div class="name_container">
-		<h1><%= current_user.name %></h1>
-	</div>
-	
-	<br>
-	<br>
-
-	<h1 class="post_title">
-		I also sent you a confirmation email via Mandrill's REST API.
-	</h1>
 <% end %>
 
 
