@@ -5,9 +5,29 @@
 .form_div {
 	height: auto;
 	overflow: hidden;
-	width: 98%;
+	width: 80%;
 	margin: auto;
 	margin-bottom: 5em;
+}
+
+.contact_options {
+	font-size: 1em;
+	text-align: center;
+	font-family: 'Roboto Condensed', 'Arial', sans-serif;
+	color: 	#D8D8D8;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.contact_options li {
+	display: inline;
+	margin: 0 5px;
+	cursor: pointer;
+	cursor: hand;
+}
+
+.pipe {
+	color: #E0E0E0;	
 }
 
 .line {
@@ -44,10 +64,10 @@
 
 #name {
 	width: 100%;
-	margin: auto;
+	margin-left: 5px;
 	margin-top: 5px;
 	margin-bottom: 5px;
-	font-size: 1.25em;
+	font-size: 1.1em;
 	color: gray;
 }
 
@@ -55,12 +75,25 @@
 	outline: 0;
 }
 
-#message {
+#email {
 	width: 100%;
-	margin: auto;
+	margin-left: 5px;
 	margin-top: 5px;
 	margin-bottom: 5px;
-	font-size: 1.25em;
+	font-size: 1.1em;
+	color: gray;
+}
+
+#email:focus {
+	outline: 0;
+}
+
+#message {
+	width: 100%;
+	margin-left: 5px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	font-size: 1.1em;
 	color: gray;
 	resize: none;
 }	
@@ -71,7 +104,7 @@
 
 .submit {
 	width: 300px;
-	height: 35px;
+	height: 45px;
 	display: block;
 	margin: auto;
 	margin-top: 20px;
@@ -80,25 +113,13 @@
 	border: none;
 	border-radius: 6px;
 	font-size: 1em;
-	font-family: georgia, serif;
+	font-family: 'Roboto Condensed', sans-serif;
 }
 
 .submit:hover {
 	background: #009989;
 }
 
-.contact_options {
-	font-size: 1.1em;
-	text-align: center;
-	font-family: 'Roboto Condensed', 'Arial Narrow', sans-serif;
-}
-
-.contact_options li {
-	display: inline;
-	margin: 0 5px;
-	cursor: pointer;
-	cursor: hand;
-}
 
 .recaptcha {
 	width: 300px;

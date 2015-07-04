@@ -13,12 +13,14 @@ $(document).on('page:change', function() {
 		e.preventDefault()
 		var selected = $(this)
 		var litext = $(this).text()
+		var pipe = $('ul.contact_options li.pipe')
 
 		$('ul.contact_options li').attr({
 			class: "inactive"
 		});
 
-		$(selected).attr('class', "active")	
+		$(selected).attr('class', "active")
+		$(pipe).attr('class', "pipe")	
 
 		if(litext == "Contact Me") {
 			$('.development').removeClass("hide");

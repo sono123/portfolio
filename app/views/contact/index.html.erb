@@ -2,7 +2,7 @@
 
 <ul class="contact_options">
 	<li class="active">Contact Me</li>
-	<li>|</li>
+	<li class="pipe">|</li>
 	<li class="inactive">Guest Post</li>
 </ul>
 
@@ -22,14 +22,16 @@
 	  <%= text_field_tag(:name, nil, class: "form_field", value: "Name", onfocus: "if (this.value=='Name') this.value='';", onblur: "if (this.value=='') this.value='Name';") %>
 		
 		<div class="line"></div>
+
+		<%= text_field_tag(:email, nil, class: "form_field", value: "Email", onfocus: "if (this.value=='Email') this.value='';", onblur: "if (this.value=='') this.value='Email';") %>
+		
+		<div class="line"></div>
 		
 		<%= text_area_tag(:message, "Message", class: "form_field", value: "Message", cols: "60", rows: "4", onfocus: "if (this.value=='Message') this.value='';", onblur: "if (this.value=='') this.value='Message';") %>
 		
 		<div class="line"></div>
 
 		<div id="recaptcha1">
-		<!-- <div class="recaptcha1"> -->
-			<!-- <%= recaptcha_tags %> -->
 		</div>
 
 	  <%= submit_tag("SEND", class: "submit") %>
@@ -63,8 +65,6 @@
 		<div class="line"></div>
 
 		<div id="recaptcha2">
-		<!-- <div class="recaptcha2"> -->
-		<!-- <%= recaptcha_tags %> -->
 		</div>
 	 
 		<%= f.submit("SUBMIT", class: "submit") %>

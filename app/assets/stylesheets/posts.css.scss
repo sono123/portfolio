@@ -387,7 +387,7 @@ span.by {
 	margin-top: 5px;
 	margin-bottom: 5px;
 	border: none;
-	font-size: 1.25em;
+	font-size: 1.1em;
 	color: gray;
 	resize: none;
 }
@@ -395,10 +395,14 @@ span.by {
 .new_post {
 	width: 100%;
 	margin: 0 0 0 6px;
+	margin-top: 5px;
+	margin-bottom: 5px;
 }
 
 .form_field:focus {
 	outline: 0;
+	margin-top: 5px;
+	margin-bottom: 5px;
 }
 
 #post_category_id {
@@ -413,11 +417,15 @@ span.by {
 	width: 100%;
 	margin-left: 5px;
 	background: rgb(248, 248, 248);
+	margin-top: 5px;
+	margin-bottom: 5px;
 }
 
 .image_upload {
 	width: 100%;
 	font-size: .75em;
+	margin-top: 7px;
+	margin-bottom: 7px;
 }
 
 .spacer_small {
