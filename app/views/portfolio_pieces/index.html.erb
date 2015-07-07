@@ -8,12 +8,12 @@
 	<li class="inactive">Development</li>
 </ul>
 
-<div class="spacer"></div>
+<div class="spacer_portfolio_index"></div>
 
 <div class="portfolio_pieces_divs">
 	<% @portfolio_pieces.each do |portfolio_piece| %>
 		
-		<div class="<%= portfolio_piece.category.name.downcase %>">
+		<div class="portfolio_images <%= portfolio_piece.category.name.downcase %>">
 			<a href="/portfolio/<%= portfolio_piece.id %>">
 				<%= image_tag(portfolio_piece.image_url, class: "portfolio_image") %>
 			</a>

@@ -32,6 +32,9 @@
 	margin-bottom: 30px;
 }
 
+.portfolio_images:hover {
+}
+
 .inactive {
 	font-weight: bold;
 	color: #1ABB9C;
@@ -41,6 +44,11 @@
 
 .hide {
 	display: none;
+}
+
+.spacer_portfolio_index {
+	width: 100%;
+	height: 48px;
 }
 
 .portfolio_piece_title {
@@ -151,7 +159,7 @@
 }
 
 .portfolio_info_div_show {
-	width: 650px;
+	width: 100%;
 	margin: auto;
 	margin-bottom: 25px;
 	margin-top: 10px;

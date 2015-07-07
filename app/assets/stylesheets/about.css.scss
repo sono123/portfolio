@@ -5,19 +5,21 @@
 .icon_divs {
 	display: block;
 	float: left;
-	width: 33%;
+	width: 33.3%;
 	height: auto;
 }
 
 .skill_icons {
 	display: block;
-	width: 33%;
+	width: 33.3%;
 	margin: auto;
 	margin-bottom: 50px;
 }
 
 .icons_container {
+	max-width: 950px;
 	width: 100%;
+	margin: auto;
 	height: auto;
 	padding: 50px 0 80px;
 	overflow: hidden;
@@ -26,13 +28,26 @@
 .skills_header {
 	display: block;
 	clear: both;
-	font-size: 2.4em;
+	font-size: 2em;
 	font-family: georgia, serif;
 	text-align: center;
-	margin-top: -20px;
+	margin-top: 10px;
+}
+
+.about_image_div {
+	width: 100%;
+}
+
+.about_image {
+	max-width: 700px;
+	width: 75%;
+	display: block;
+	margin: auto;
+	border: 7px solid #F2F2F2;
 }
 
 .about_paragraph_container {
+	max-width: 700px;
 	width: 80%;
 	margin: auto;
 	margin-top: 20px;
@@ -40,16 +55,17 @@
 }
 
 .about_paragraph {
-  font-size: 1.2em;
+	font-size: 1.1em;
   font-family: georgia, serif;
-  line-height: 1.5em;
+  line-height: 1.9em;
   margin: 0 0 20px;
 }
 
 .about_header {
 	display: block;
+	margin: 0 0 45px;
 	clear: both;
-	font-size: 2.4em;
+	font-size: 2em;
 	font-family: georgia, serif;
 	text-align: center;
 }

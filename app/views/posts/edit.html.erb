@@ -14,7 +14,6 @@
 	By <%= @post.author %>, Posted on <%= date_formatter(@post.created_at) %>
 </p>
 
-
 <% unless @post.pictures.empty? %>
 	<% @post.pictures.each do |pic| %>
 		<%= image_tag( pic.image.url, class: "post_image_large" ) %>
@@ -48,10 +47,3 @@
 	<% end %>
 <% end %>
 	
-
-
-
-
-
-
-

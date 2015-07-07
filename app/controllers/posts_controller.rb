@@ -34,6 +34,7 @@ class PostsController < ApplicationController
 
   def index
   	@posts = Post.all
+    @featured = Post.where(featured: true)
   	@categories = Category.all
   end
 
@@ -94,13 +95,17 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
 
     respond_to do |format|
-      if @post.update_attributes("approved" => true)
+      if params[:approved]
+        @post.update_attributes("approved" => params[:approved])
+        format.html  { redirect_to('/posts', :notice => 'Post was successfully updated.') }
+        format.json  { head :no_content }
+      elsif params[:featured]
+        @post.update_attributes("featured" => params[:featured])
         format.html  { redirect_to('/posts', :notice => 'Post was successfully updated.') }
         format.json  { head :no_content }
       else
         format.html  { render :action => "edit" }
-        format.json  { render :json => @post.errors,
-                      :status => :unprocessable_entity }
+        format.json  { render :json => @post.errors, :status => :unprocessable_entity }
       end
     end
   end

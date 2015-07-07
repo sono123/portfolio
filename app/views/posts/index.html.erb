@@ -10,6 +10,9 @@
 	<% end %>
 <% end %>
 
+<!-- <h2 class="guest_post_h2"><a class="guest_post_link" href="/contact">Submit a guest post here</a></h2> -->
+<!-- <div class="spacer_small"></div> -->
+
 <div class="spacer"></div>
 
 <div class="blog_main_container">
@@ -21,8 +24,22 @@
 
 	<div class="right_column_posts">
 		<h1 class="recent_posts_header">Featured Posts</h1>
-		<% @posts.each do |post| %>
+		<% @featured.each do |post| %>
 			<%= render partial: 'posts/featured_posts', locals: {post: post} %>
 		<% end %>
+
+		<div class="spacer"></div>
+
+		<h1 class="recent_posts_header">About Me</h1>
+		<%= link_to(image_tag('about-round.jpeg', id: 'about_round'), about_path) %>
+		<p class="about_p">
+			Numquam quae sit incidunt magni non quisquam. Maiores sunt omnis. Velit cupiditate culpa repudiandae rem illum repellat quod. Quia et sit velit alias mollitia eveniet eos.
+		</p>
+		<a class="about_a" href="/about">Learn more about me</a>
+
 	</div>
 </div>
+
+
+
+
