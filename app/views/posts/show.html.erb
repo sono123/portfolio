@@ -35,9 +35,7 @@
 <div class="spacer_small"></div>
 
 <div class="post_body">
-	<p class="post_paragraph">
-		<%= @post.body %>
-	</p>
+	<%= simple_format(@post.body, class: "post_paragraph") %>
 </div>
 
 <% if current_user %>
