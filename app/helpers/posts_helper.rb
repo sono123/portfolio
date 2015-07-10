@@ -17,4 +17,8 @@ module PostsHelper
 		end
 	end
 
+	def format_html(content)
+		content.gsub!("\r\n", "")
+	end
+
 end

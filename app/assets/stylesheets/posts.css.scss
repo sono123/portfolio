@@ -240,7 +240,7 @@ i.preview_category {
 }
 
 .post_image_large {
-	width: 80%;
+	width: 100%;
 	max-width: 650px;
 	display: block;
 	margin: auto;
@@ -249,7 +249,8 @@ i.preview_category {
 }
 
 .post_body {
-	width: 650px;
+	width: 100%;
+	max-width: 650px;
 	display: block;
 	margin: auto;
 }
@@ -280,6 +281,20 @@ i.preview_category {
   margin: 0 0 20px;
 }
 
+.post_body p {
+  font-size: 1.1em;
+  font-family: georgia, serif;
+  line-height: 1.9;
+  margin: 0 0 20px;
+}
+
+.post_body span {
+	font-family: "Courier", "Georgia", serif;
+}
+
+.post_body .code {
+	margin-left: -7px;
+}
 
 
 
@@ -388,14 +403,12 @@ i.fa-linkedin {
 
 
 .page_info_div_show {
-	width: 650px;
 	margin: auto;
 	margin-bottom: 25px;
 	text-align: center;
 }
 
 .post_title_show {
-	width: 650px;
 	padding: 20px 0 25px;
   font-family: georgia, serif;
   font-size: 2.5em;
@@ -538,10 +551,6 @@ span.by {
 	cursor: pointer;
 	cursor: hand;
 }
-
-
-
-
 
 
 

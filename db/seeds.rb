@@ -18,7 +18,7 @@ end
 	post = Post.create(category_id: rand(1..5),
 					 title: Faker::Lorem.sentence(3),
 					 author: "Steve Ono",
-					 body: Faker::Lorem.paragraph(10)
+					 body: "<p>#{Faker::Lorem.paragraph(10)}</p>"
 					 )
 	pic = post.pictures.new({:post_id => post.id})
 	pic.image = URI.parse("http://lorempixel.com/600/400/")
