@@ -33,8 +33,8 @@ class PostsController < ApplicationController
 
 
   def index
-  	@posts = Post.all
-    @featured = Post.where(featured: true)
+  	@posts = Post.all.sort_by(&:created_at).reverse
+    @featured = Post.where(featured: true).sort_by(&:created_at).reverse
   	@categories = Category.all
   end
 
