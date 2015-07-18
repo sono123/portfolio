@@ -20,6 +20,7 @@ $(document).on('page:change', function() {
 		});
 
 		$(selected).attr('class', "active")
+		
 		$(pipe).attr('class', "pipe")	
 
 		if(litext == "Contact Me") {

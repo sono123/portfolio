@@ -2,6 +2,14 @@
 <div class="spacer"></div>
 
 <div class="center">
-	<h1 id="hello">Hello!</h1>
-	<p id="my_name">I'm Steve Ono. I'm a web developer + graphic designer in NYC.<br>Feel free to poke around my site to learn more about me.</p>
+
+	<% if flash[:success] %>
+		<div class="spacer"></div>		
+		<p id="my_name"><%= flash[:success] %></p>
+	<% else %>	
+		<h1 id="hello">Hello!</h1>
+		<p id="my_name">My name is Steve. I'm a web developer + graphic designer in NYC.<br>Feel free to poke around my website to learn more about me.</p>
+	<% end %>
+
 </div>
+

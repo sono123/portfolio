@@ -31,6 +31,11 @@
 		
 		<div class="line"></div>
 
+		<% if flash[:inquiry_error] %>
+			<div class="spacer_small"></div>
+			<p class="flash_recaptcha"><%= flash[:inquiry_error] %></p>
+		<% end %>
+
 		<div id="recaptcha1">
 		</div>
 
@@ -64,6 +69,11 @@
 
 		<div class="line"></div>
 
+		<% if flash[:post_error] %>
+			<div class="spacer_small"></div>
+			<p class="flash_recaptcha"><%= flash[:post_error] %></p>
+		<% end %>
+
 		<div id="recaptcha2">
 		</div>
 	 
@@ -92,6 +102,16 @@
     });
   };
 </script>
+
+<% if flash[:post_error] %>
+	<script type="text/javascript">
+		$(document).ready( function() {
+			$("li").last()[0].click();
+			// $("li").last().trigger("click");
+			// alert("<%=flash[:post_error]%>");
+		});
+	</script>
+<% end %>
 
 
 

@@ -55,9 +55,9 @@ class PostsController < ApplicationController
 
   def create
     if verify_recaptcha
-      10.times { puts "*" }
-      puts "RECAPTCHA VERIFIED"
-      10.times { puts "*" }
+      # 10.times { puts "*" }
+      # puts "RECAPTCHA VERIFIED"
+      # 10.times { puts "*" }
 
       @post = Post.new(post_params)
 
@@ -78,11 +78,11 @@ class PostsController < ApplicationController
         end
       end
     else
-      10.times { puts "*" }
-      puts "RECAPTCHA NOT VERIFIED"
-      10.times { puts "*" }
+      # 10.times { puts "*" }
+      # puts "RECAPTCHA NOT VERIFIED"
+      # 10.times { puts "*" }
 
-      flash[:error] = "Recaptcha Failed. Please try again."
+      flash[:post_error] = "Recaptcha Failed. Please try again."
       redirect_to '/contact'
     end
   end
