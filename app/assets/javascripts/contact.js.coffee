@@ -36,10 +36,21 @@ $(document).on('page:change', function() {
 			$('.development').removeClass("hide");
 		};
 
+		$('.image_upload').on('change', function() {
+			var fileName = $('.image_upload').val();
+			//alert(fileName)
+			$('#selected_file').text(fileName);
+		});
+
+		$('button.upload').on('click', function(e) {
+			e.preventDefault();
+			$('.image_upload')[0].click();
+		});
+
 	});
 
 
-	// From here down, this only works when placed at the bottom of page. Why??
+	// From here down, this only works when placed at the bottom of erb page. Why??
 	
 	var recaptcha1;
   var recaptcha2;

@@ -65,7 +65,12 @@
 
 		<div class="line"></div>
 
-		<%= file_field_tag("images[]", type: :file, multiple: true, class: "form_field image_upload") %>
+			<%= f.button("Add Image", class: "upload") %>
+			<%= file_field_tag("images[]", type: :file, multiple: true, class: "form_field image_upload") %>
+
+			<div class="selected_file_div">
+				<p id="selected_file" style="margin-top: 8px;">no file selected</p>
+			</div>
 
 		<div class="line"></div>
 

@@ -497,10 +497,12 @@ span.by {
 }
 
 .image_upload {
-	width: 100%;
+	width: 100px;
 	font-size: .75em;
 	margin-top: 7px;
 	margin-bottom: 7px;
+	display: inline;
+	display: none;
 }
 
 .spacer_small {
