@@ -110,7 +110,7 @@
 
 <% if flash[:post_error] %>
 	<script type="text/javascript">
-		$(document).ready( function() {
+		$(document).on('page:change', function() {
 			$("li").last()[0].click();
 			// $("li").last().trigger("click");
 			// alert("<%=flash[:post_error]%>");
