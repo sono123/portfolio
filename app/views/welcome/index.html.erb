@@ -1,15 +1,26 @@
 <div class="spacer"></div>
-<div class="spacer"></div>
+<div class="spacer hide_mobile"></div>
 
 <div class="center">
 
 	<% if flash[:success] %>
 		<div class="spacer"></div>		
-		<p id="my_name"><%= flash[:success] %></p>
+		<p class="my_name"><%= flash[:success] %></p>
 	<% else %>	
 		<h1 id="hello">Hello!</h1>
-		<p id="my_name">My name is Steve. I'm a web developer + graphic designer in NYC.<br>Feel free to poke around my website to learn more about me.</p>
+		<p class="my_name">My name is Steve. I'm a web developer + graphic designer in NYC. Feel free to poke around my website to learn more about me.</p>
 	<% end %>
 
 </div>
 
+<div class="center_mobile">
+
+	<% if flash[:success] %>
+		<div class="spacer"></div>		
+		<p class="my_name_mobile"><%= flash[:success] %></p>
+	<% else %>	
+		<h1 id="hello_mobile">Hello!</h1>
+		<p class="my_name_mobile">My name is Steve. I'm a web developer + graphic designer in NYC. Feel free to poke around my website to learn more about me.</p>
+	<% end %>
+
+</div>
