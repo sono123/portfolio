@@ -70,10 +70,10 @@ class PostsController < ApplicationController
             }
           end
 
-          format.html { redirect_to @post, notice: 'Post was successfully created.' }
-          format.json { render json: @post, status: :created, location: @post }
+          format.html { redirect_to "/posts", notice: 'Post was successfully created.' }
+          format.json { render json: "/posts", status: :created, location: @post }
         else
-          format.html { render action: "new", notice: 'Your post could not be submitted. Check fields carefully.' }
+          format.html { redirect_to "/contact", notice: 'Your post could not be submitted. Check fields carefully.' }
           format.json { render json: @post.errors, status: :unprocessable_entity }
         end
       end
