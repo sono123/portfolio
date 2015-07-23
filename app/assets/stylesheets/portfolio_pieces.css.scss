@@ -879,6 +879,92 @@ textarea:focus {
 
 
 
+@media (max-width: 1100px) {
+	.pagetitle {
+		width: 15%;
+	}
+
+	.searchboxdiv {
+		width: 55%;
+	}
+
+	.summary input {
+		margin-left: 25px;
+	}
+}
+
+
+
+@media (max-width: 775px) {
+	.webmail_demo {
+		width: 97%;
+	}
+
+	li.username {
+		display: none;
+	}
+}
+
+
+@media (max-width: 620px) {
+	.webmail_demo {
+		width: 96%;
+	}
+
+	.pagetitle {
+		display: none;
+	}
+
+	.summary .checkboxes {
+		display: none;
+	}
+
+	.summary a {
+		padding-right: 20px;
+		padding-left: 20px;
+	}
+
+	p.message_date {
+		display: none;
+	}
+
+	.navbuttonsdiv {
+		width: 40%;
+	}
+}
+
+
+@media (max-width: 490px) {
+
+	.navbuttonsdiv {
+		width: 45%;
+	}
+
+	.summary a {
+		width: 20%;
+		padding-left: 10px;
+	}
+
+	.summary h1 {
+		min-width: 125px;
+		width: 60%;
+	}
+
+	.showmessage {
+		width: 100%;
+	}
+
+	.searchbox {
+		width: 130px;
+	}
+
+	input#search {
+		width: 95px;
+	}
+}
+
+
+
 
 
 
