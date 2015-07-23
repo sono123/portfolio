@@ -10,8 +10,12 @@
 		<span class="by">By</span> 
 		<span class="post_author_show"><%= @post.author %></span>
 		<span class="date_show">Posted on <%= date_formatter(@post.created_at) %></span>
-		<span class="category_p_show"><i class="fa fa-bookmark preview_category"></i></span>
-		<span class="category_p_show"><%= @post.category.name %></span>
+		<span class="category_p_show category_hide_mobile"><i class="fa fa-bookmark preview_category"></i></span>
+		<span class="category_p_show category_hide_mobile"><%= @post.category.name %></span>
+		<div class="category_show_mobile">
+			<span class="category_p_show"><i class="fa fa-bookmark preview_category"></i></span>
+			<span class="category_p_show"><%= @post.category.name %></span>
+		</div>
 	</div>
 
 </div>
