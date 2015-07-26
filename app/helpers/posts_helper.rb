@@ -1,7 +1,7 @@
 module PostsHelper
 
 	def date_formatter(date)
-		date.strftime("%b %d, %Y, %H, %M")
+		date.strftime("%b %d, %Y")
 	end
 
 	def category_helper(category_id)
