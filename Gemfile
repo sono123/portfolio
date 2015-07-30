@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'faker'
 gem "paperclip", "~> 4.2"
+gem 'aws-sdk', '< 2.0'
 gem 'omniauth', '~> 1.2.2'
 gem 'omniauth-google-oauth2'
 gem 'google-api-client', :require => 'google/api_client'
