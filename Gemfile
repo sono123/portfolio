@@ -12,6 +12,7 @@ gem "recaptcha", require: "recaptcha/rails", github: "ambethia/recaptcha"
 gem 'google-webfonts-rails', '~> 0.0.4'
 gem 'google-webfonts'
 
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'
 # Use postgresql as the database for Active Record

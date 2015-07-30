@@ -8,7 +8,7 @@
 
 require "open-uri"
 
-categories = ["Automotive", "Technology", "Hardware", "Aircraft", "Opinion", "Design", "Development"]
+categories = ["Automotive", "Technology", "Hardware", "Opinion", "Design", "Development"]
 
 categories.each do |category|
 	Category.create(name: category)
