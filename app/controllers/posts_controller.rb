@@ -55,21 +55,15 @@ class PostsController < ApplicationController
 
   def create
     if verify_recaptcha
-      # 10.times { puts "*" }
-      # puts "RECAPTCHA VERIFIED"
-      # 10.times { puts "*" }
-
       @post = Post.new(post_params)
 
       respond_to do |format|
         if @post.save
-         
           if params[:images]
             params[:images].each { |image|
               @post.pictures.create(image: image)
             }
           end
-
           format.html { redirect_to "/posts", notice: 'Post was successfully created.' }
           format.json { render json: "/posts", status: :created, location: @post }
         else
@@ -78,10 +72,6 @@ class PostsController < ApplicationController
         end
       end
     else
-      # 10.times { puts "*" }
-      # puts "RECAPTCHA NOT VERIFIED"
-      # 10.times { puts "*" }
-
       flash[:post_error] = "Recaptcha Failed. Please try again."
       redirect_to '/contact'
     end

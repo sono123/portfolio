@@ -4,30 +4,12 @@ class SessionsController < ApplicationController
   def create
     @auth = request.env['omniauth.auth']
 
-    # 100.times { print "*" }
-    # p @auth
-    # 100.times { print "*" }
-
 		if user = User.find_by(email: @auth['info']['email'])
-			# 10.times {puts "*"}
-			# puts "REACHED IF CLAUSE"
-			# puts user.first_time_user
-			# 10.times {puts "*"}
-
 			user.update_attribute(:first_time_user, false)
-
-			# 10.times {puts "*"}
-			# puts user.first_time_user
-			# 10.times {puts "*"}
-
 			session[:user_id] = user.id
 			flash[:position] = "location on page goes here"
 			redirect_to "/portfolio/6"
 		else
-			# 10.times {puts "*"}
-			# puts "REACHED IF CLAUSE"
-			# 10.times {puts "*"}
-
 			user = User.create(
 				email: @auth['info']['email'],
 	      access_token: @auth['credentials']['token'],

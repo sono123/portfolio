@@ -36,10 +36,6 @@ class InquiriesController < ApplicationController
 
   def create
     if verify_recaptcha
-      # 10.times { puts "*" }
-      # puts "RECAPTCHA VERIFIED"
-      # 10.times { puts "*" }
-
     	inquiry = Inquiry.create(name: params['name'], message: params['message'])
       if admin?
     	  redirect_to "/inquiries"
@@ -48,10 +44,6 @@ class InquiriesController < ApplicationController
         redirect_to "/"
       end
     else
-      # 10.times { puts "*" }
-      # puts "RECAPTCHA NOT VERIFIED"
-      # 10.times { puts "*" }
-      
       flash[:inquiry_error] = "Recaptcha Failed. Please try again."
       redirect_to '/contact'
     end
